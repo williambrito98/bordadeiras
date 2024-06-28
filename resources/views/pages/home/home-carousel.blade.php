@@ -1,0 +1,1 @@
+<x-carousel :itens="$bordadeirasImages" />
