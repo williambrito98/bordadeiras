@@ -16,12 +16,12 @@ class HomeController extends Controller
         $bordadeirasImages = [];
 
         $bordadeirasImages[] = (object) [
-            'src' => 'https://www.bordadeirasdobrasil.com.br/img/q_Rosilene-Aparecida-Mendes-bordadeiras-do-Brasil-17-06-24-134345-1999_2.jpg',
+            'src' => '/img/q_Rosilene-Aparecida-Mendes-bordadeiras-do-Brasil-17-06-24-134345-1999_2.jpg',
             'alt' => 'Bordadeira 1',
         ];
 
         $bordadeirasImages[] = (object) [
-            'src' => 'https://www.bordadeirasdobrasil.com.br/img/q_Lilian-Regina-Borges-Peres-Itaya-bordadeiras-do-Brasil-17-06-24-133442-1998_2.jpg',
+            'src' => '/img/q_Lilian-Regina-Borges-Peres-Itaya-bordadeiras-do-Brasil-17-06-24-133442-1998_2.jpg',
             'alt' => 'Bordadeira 2',
         ];
 

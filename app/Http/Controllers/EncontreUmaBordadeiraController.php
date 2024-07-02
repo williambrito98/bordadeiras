@@ -14,7 +14,7 @@ class EncontreUmaBordadeiraController extends Controller
 
         $bordados[] = (object)[
             'link' => 'https://www.instagram.com/p/CQ1J9J6j6Zv/',
-            'img_url' => 'https://www.bordadeirasdobrasil.com.br/img/q_Rosilene-Aparecida-Mendes-bordadeiras-do-Brasil-17-06-24-134345-1999_2.jpg',
+            'img_url' => '/img/q_Rosilene-Aparecida-Mendes-bordadeiras-do-Brasil-17-06-24-134345-1999_2.jpg',
             'bordadeira_nome' => 'Ana Amaral',
             'cidade' => (object)[
                 'nome' => 'São Paulo',
@@ -26,7 +26,7 @@ class EncontreUmaBordadeiraController extends Controller
 
         $bordados[] = (object)[
             'link' => 'https://www.instagram.com/p/CQ1J9J6j6Zv/',
-            'img_url' => 'https://www.bordadeirasdobrasil.com.br/img/q_Lilian-Regina-Borges-Peres-Itaya-bordadeiras-do-Brasil-17-06-24-133442-1998_2.jpg',
+            'img_url' => '/img/q_Lilian-Regina-Borges-Peres-Itaya-bordadeiras-do-Brasil-17-06-24-133442-1998_2.jpg',
             'bordadeira_nome' => 'Lilian Regina Borges Peres',
             'cidade' => (object)[
                 'nome' => 'Rio Grande do Sul',

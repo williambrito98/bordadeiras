@@ -1,4 +1,4 @@
-<div class="breadcumb-area" style="background-image: url(/img/g_site24_03_20_08_12_30-1962.jpg);">
+<div class="breadcumb-area" style="background-image: url(/img/g_site24_03_20_08_12_46-1964.jpg);">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12">
