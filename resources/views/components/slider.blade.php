@@ -16,16 +16,22 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 @else
-                    <img src="{{ $item->src }}" alt="{{ $item->alt }}">
+                    <img style="height: 100%;" src="{{ $item->src }}" alt="{{ $item->alt }}">
+                    @isset($item->description)
+                        <div class="slider-legends">
+                            {{ $item->description }}
+                        </div>
+                    @endif
                 @endisset
             </div>
         @endforeach
     </div>
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
 
 </div>
+
+<!-- If we need navigation buttons -->
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
 
 
 <script>

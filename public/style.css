@@ -127,6 +127,7 @@ p {
 .section_padding_80 {
     margin-top: 80px;
     margin-bottom: 80px;
+    position: relative;
 }
 
 .section_padding_80_50 {
@@ -709,7 +710,6 @@ li {
     color: #232d37;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
-    text-transform: capitalize;
 }
 
 .single-post h2:hover,
@@ -1647,7 +1647,6 @@ iframe {
 
 .zoom {
     transition: transform 0.3s ease-in-out;
-    overflow: hidden;
 }
 
 .zoom:hover {
@@ -1695,4 +1694,77 @@ iframe {
     width: 100%;
     height: auto;
     background: white;
+}
+
+.link-destacado {
+    background: rgba(65, 150, 57, 0.7) !important;
+    color: white !important;
+    font-size: 20px !important;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+.slider-legends {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 15%;
+    left: auto;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 15%;
+    right: auto;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: 4rem;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}
+
+
+.owl-carousel .owl-item img {
+    height: calc(100vh / 3) !important;
+    object-fit: cover !important;
+}
+
+
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem vertical */
+    height: 12px; /* Altura da barra de rolagem horizontal */
+}
+
+/* Estiliza a parte interna da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor de fundo do track */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+/* Estiliza a parte rolável da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do thumb */
+    border-radius: 10px; /* Borda arredondada */
+}
+
+/* Estiliza a parte rolável da barra de rolagem quando hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do thumb quando hover */
 }
