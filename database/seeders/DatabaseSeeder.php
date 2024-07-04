@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,11 +12,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $this->call([
+            EstadoSeed::class,
+            CidadeSeed::class
         ]);
+    }
+
+    private function runFactories(...$models)
+    {
+        foreach ($models as $model) {
+            if (env('APP_ENV') !== 'local') return null;
+            $model = new $model;
+            if ($model::count() === 0) $model::factory(10)->create();
+        }
     }
 }

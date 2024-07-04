@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Login</title>
+    <title>Bordadeiras Do Brasil - Login (ADM)</title>
+
+    <link rel="icon" href="favicon.png">
+
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
@@ -13,7 +16,7 @@
         @csrf
         <div class="input-group">
             <label for="name">Email</label>
-            <input value="{{old('email')}}" type="email" id="email" name="email" required>
+            <input value="{{old('email')}}" type="email" id="email" name="email" required autocomplete="">
             <x-input-error :messages="$errors->get('email')" class="mt-2"/>
         </div>
         <div class="input-group">
