@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApoiadoresController;
+use App\Http\Controllers\BordadeiraController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EncontreUmaBordadeiraController;
@@ -16,6 +17,7 @@ Route::get('/encontre-uma-bordadeira', [EncontreUmaBordadeiraController::class, 
 Route::get('/apoiadores', [ApoiadoresController::class, 'index'])->name('apoiadores');
 Route::get('/noticias', [NoticiasController::class, 'index'])->name('noticias');
 Route::get('/contato', [ContatoController::class, 'index'])->name('contato');
+Route::get('/bordadeira/{bordadeira:nome}', [BordadeiraController::class, 'index'])->name('bordadeira');
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');

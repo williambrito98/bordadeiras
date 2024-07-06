@@ -14,7 +14,12 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             EstadoSeed::class,
-            CidadeSeed::class
+            CidadeSeed::class,
+            NoticiasSeed::class,
+            DepoimentosSeed::class,
+            BordadeirasSeed::class,
+            RedesSociaisSeed::class,
+            NossaHistoriaSeed::class
         ]);
     }
 

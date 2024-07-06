@@ -1,9 +1,10 @@
-@foreach($posts as $post)
+@foreach($noticias as $noticia)
     <div class="noticia zoom">
-        <a href="{{ $post->site_url }}">
-            <img src="{{ $post->image_url }}" alt="Imagem da Notícia 1">
+        <a href="{{ $noticia->site_url }}" target="_blank">
+            <img src="{{ $noticia->image_url }}" alt="">
             <div class="conteudo">
-                {!! $post->content !!}
+                <h2>{{ $noticia->title }}</h2>
+                {!! $noticia->subtitle !!}
             </div>
         </a>
     </div>

@@ -7,7 +7,7 @@
         </div>
 
         <div class="noticias">
-            @include('pages.noticias.noticias-posts', ['posts' => $posts])
+            @include('pages.noticias.noticias-posts', ['noticias' => $noticias])
         </div>
     </section>
 

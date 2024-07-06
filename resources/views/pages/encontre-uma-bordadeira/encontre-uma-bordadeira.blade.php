@@ -3,7 +3,7 @@
     <section class="archive-area section_padding_80">
         @include('pages.encontre-uma-bordadeira.encontre-uma-bordadeira-descricao', ['description' => $description])
 
-        @include('pages.encontre-uma-bordadeira.encontre-uma-bordadeira-bordados', ['bordados' => $bordados])
+        @include('pages.encontre-uma-bordadeira.encontre-uma-bordadeira-bordadeiras', ['bordadeiras' => $bordadeiras])
     </section>
 
     @include('pages.components.banner')

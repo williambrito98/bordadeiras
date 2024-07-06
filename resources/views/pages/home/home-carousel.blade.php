@@ -1,1 +1,1 @@
-<x-carousel :itens="$bordadeirasImages" />
+<x-carousel :itens="$noticias" />

@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bordadeiras;
+use App\Models\Depoimentos;
+use App\Models\Noticias;
+
 class HomeController extends Controller
 {
     /**
@@ -9,23 +13,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $title = 'Bordadeiras do Brasil';
+        $title = 'Home';
 
-        $bordadeirasImages = [];
-
-        $bordadeirasImages[] = (object)[
-            'image_url' => '/img/noticia_1.jpg',
-            'title' => '‘A Arte de Bordar’ chega a Mogi Guaçu com formação gratuita para 100 mulheres',
-            'site_url' => 'https://horacampinas.com.br/a-arte-de-bordar-chega-a-mogi-guacu-com-formacao-gratuita-para-100-mulheres/',
-            'alt' => ''
-        ];
-
-        $bordadeirasImages[] = (object)[
-            'image_url' => '/img/noticia_2.jpg',
-            'title' => 'ÚLTIMOS DIAS PARA SE INSCREVER NA FORMAÇÃO GRATUITA ‘A ARTE DE BORDAR’ QUE ENSINARÁ O OFÍCIO DE BORDADEIRA PARA 100 MULHERES',
-            'site_url' => 'https://oregional.net/ultimos-dias-para-se-inscrever-na-formacao-gratuita-a-arte-de-bordar-que-ensinara-o-oficio-de-bordadeira-para-100-mulheres-169179',
-            'alt' => ''
-        ];
+        $noticias = Noticias::all();
 
         $slider = [];
 
@@ -57,7 +47,10 @@ class HomeController extends Controller
             'description' => ''
         ];
 
+        $depoimentos = Depoimentos::all();
 
-        return view('pages.home.home', compact(['title', 'bordadeirasImages', 'slider']));
+        $bordadeiras = Bordadeiras::all();
+
+        return view('pages.home.home', compact(['title', 'noticias', 'slider', 'depoimentos', 'bordadeiras']));
     }
 }

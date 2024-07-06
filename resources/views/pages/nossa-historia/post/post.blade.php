@@ -9,13 +9,13 @@
                 <div class="blog-sidebar mt-5 mt-lg-0">
                     <div class="single-widget-area about-me-widget text-center">
                         <x-title :text="$post->title"/>
-                        @include('pages.nossa-historia.post.post-image', ['img_url' => $post->img_url])
+                        @include('pages.nossa-historia.post.post-image', ['img_url' => $post->thumbnail])
 
                         <h4 class="font-shadow-into-light" style="font-size: 30px">
                             {{ $post->subtitle }}
                         </h4>
 
-                        @include('pages.nossa-historia.post.post-social-medias', ['social_medias' => $post->social_medias])
+                        @include('pages.nossa-historia.post.post-social-medias', ['post' => $post])
 
                         {!! $post->content !!}
                     </div>

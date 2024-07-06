@@ -1706,6 +1706,13 @@ iframe {
     border-radius: 5px;
 }
 
+@media (max-height: 768px) {
+    .fixed-bottom {
+        position: relative;
+    }
+}
+
+
 @media (max-width: 768px) {
     .link-destacado {
         font-size: 0.9rem !important;
@@ -1764,7 +1771,7 @@ iframe {
 
 
 .owl-carousel .owl-item img {
-    height: calc(100vh / 3) !important;
+    height: calc((100vh / 3) + 150px) !important;
     object-fit: cover !important;
 }
 

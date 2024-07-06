@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Bordadeiras do Brasil</title>
+    <title>{{ env('APP_TITLE') }} {{ $title ? ' - ' . $title : '' }}</title>
 
     <link rel="icon" href="favicon.png">
 
@@ -14,8 +14,8 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
 
     <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
     <!-- Core Stylesheet -->
@@ -23,7 +23,7 @@
 
     <!-- Responsive CSS -->
     <link href="/css/responsive/responsive.css" rel="stylesheet">
-    <script  src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Jquery-2.2.4 js -->
     <script src="/js/jquery/jquery-2.2.4.min.js"></script>
@@ -56,7 +56,7 @@
                 <nav class="navbar navbar-expand-lg">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yummyfood-nav"
                             aria-controls="yummyfood-nav" aria-expanded="false" aria-label="Toggle navigation"><i
-                            class="fa fa-bars" aria-hidden="true"></i> Menu
+                                class="fa fa-bars" aria-hidden="true"></i> Menu
                     </button>
                     <!-- Menu Area Start -->
                     <div class="collapse navbar-collapse justify-content-center" id="yummyfood-nav">
