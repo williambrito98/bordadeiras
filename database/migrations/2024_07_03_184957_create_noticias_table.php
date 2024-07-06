@@ -14,7 +14,8 @@ return new class extends Migration {
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable(false);
             $table->string('title')->nullable(false);
-            $table->text('content')->nullable(false);
+            $table->string('subtitle', 255)->nullable(false);
+            $table->text('content')->nullable(true);
             $table->string('site_url');
             $table->text('image_url')->nullable(false);
             $table->foreign('user_id')->references('id')->on('users');

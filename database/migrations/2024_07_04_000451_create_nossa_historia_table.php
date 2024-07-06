@@ -13,8 +13,8 @@ return new class extends Migration {
         Schema::create('nossa_historia', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('thumnail_url');
-            $table->string('subtitle');
+            $table->string('thumbnail');
+            $table->string('subtitle')->nullable(true);
             $table->string('email')->nullable(true);
             $table->string('instagram')->nullable(true);
             $table->string('facebook')->nullable(true);

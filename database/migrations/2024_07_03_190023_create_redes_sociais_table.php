@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('redes_sociais', function (Blueprint $table) {
             $table->id();
-            $table->string('url')->nullable(false);
-            $table->string('icon')->nullable(false);
-            $table->string('text')->nullable(false);
+            $table->string('instagram')->nullable();
+            $table->string('email')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('whatsapp')->nullable();
+            $table->string('linkedin')->nullable();
             $table->timestamps();
         });
     }
