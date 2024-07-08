@@ -25,7 +25,7 @@ class HomeController extends Controller
         ];
 
         $slider[] = (object)[
-            'src' => '/img/Fotógrafo Gabriehl Oliveira--.JPG',
+            'src' => '/img/03.JPG',
             'alt' => 'Bordadeira 1',
             'description' => 'Indaiatuba, São Paulo (2023). Foto: Gabriehl Oliveira'
         ];
@@ -40,6 +40,12 @@ class HomeController extends Controller
             'src' => '/img/Fotógrafo Niemar Silva_.jpg',
             'alt' => 'Bordadeira 2',
             'description' => 'João Monlevade, Minas Gerais (2023). Foto: Niemar Silva'
+        ];
+
+        $slider[] = (object)[
+            'src' => '/img/05.jpg',
+            'alt' => 'Bordadeira 5',
+            'description' => 'Ponta Grossa, Paraná (2019). Primeira turma formada pela Fernanda'
         ];
 
         $slider[] = (object)[
