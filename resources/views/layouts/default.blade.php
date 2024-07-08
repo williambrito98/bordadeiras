@@ -7,26 +7,28 @@
 
     <title>{{ env('APP_TITLE') }} {{ $title ? ' - ' . $title : '' }}</title>
 
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="/favicon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
 
-    <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
 
     <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
 
     <!-- Responsive CSS -->
     <link href="/css/responsive/responsive.css" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Jquery-2.2.4 js -->
     <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </head>
 <body class="bkg-pagina">
@@ -56,7 +58,7 @@
                 <nav class="navbar navbar-expand-lg">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#yummyfood-nav"
                             aria-controls="yummyfood-nav" aria-expanded="false" aria-label="Toggle navigation"><i
-                                class="fa fa-bars" aria-hidden="true"></i> Menu
+                            class="fa fa-bars" aria-hidden="true"></i> Menu
                     </button>
                     <!-- Menu Area Start -->
                     <div class="collapse navbar-collapse justify-content-center" id="yummyfood-nav">
