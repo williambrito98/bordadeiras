@@ -8,7 +8,12 @@ class BordadeiraController extends Controller
 {
     public function index(Bordadeiras $bordadeira)
     {
-        dd($bordadeira);
+        $title = 'Bordadeiras';
+
+        return view('pages.bordadeiras.bordadeira', [
+            'title' => $title,
+            'bordadeira' => $bordadeira,
+        ]);
     }
 
 }

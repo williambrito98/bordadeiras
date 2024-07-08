@@ -26,6 +26,10 @@ class Bordadeiras extends Model
         'linkedin',
     ];
 
+    protected $casts = [
+        'images' => 'array',
+    ];
+
     public function cidade()
     {
         return $this->belongsTo(Cidades::class);
