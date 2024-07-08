@@ -17,6 +17,13 @@ return new class extends Migration {
             $table->string('thumbnail_url');
             $table->text('content');
             $table->json('images');
+            $table->string('whatsapp')->nullable(true);
+            $table->string('email')->nullable(true);
+            $table->string('instagram')->nullable(true);
+            $table->string('facebook')->nullable(true);
+            $table->string('linkedin')->nullable(true);
+            $table->string('youtube')->nullable(true);
+            $table->string('portifolio')->nullable(true);
             $table->unsignedBigInteger('cidade_id');
             $table->foreign('cidade_id')->references('id')->on('cidades');
             $table->timestamps();
