@@ -3,7 +3,7 @@
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <div class="bradcumb-title text-center">
-                    <h2 class="font_halftone">{{$title}}</h2>
+                    <h2 class="font_halftone">{{ $title }}</h2>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
                                 Home</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            Nossa História
+                            {{ $title }}
                         </li>
                     </ol>
                 </nav>
