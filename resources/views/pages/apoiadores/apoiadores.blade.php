@@ -8,10 +8,9 @@
     @include('pages.apoiadores.apoiadores-patrocinadores', ['patrocinadores' => $patrocinadores])
     @include('pages.apoiadores.apoiadores-parceiros', ['parceiros' => $parceiros])
     @include('pages.apoiadores.apoiadores-realizadores', ['realizadores' => $realizadores])
-    @include('pages.apoiadores.apoiadores-bordados', ['bordados' => $bordados])
     @include('pages.components.link-destacado', [
     'url' => 'https://www.projetosestrategicos.com.br/contato.php',
-    'text' => 'Clique aqui para saber como investir neste projeto'
+    'text' => 'Saiba como levar este projeto para a sua cidade, clicando aqui'
     ])
 
     @include('pages.components.banner')

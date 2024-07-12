@@ -18,11 +18,7 @@ class ApoiadoresController extends Controller
         $patrocinadores = [];
         $patrocinadores[] = (object)[
             'site_url' => 'https://www.deere.com.br/',
-            'logo_url' => '/img/john-deere-bordadeiras-do-brasil-18-06-24-182717_1983.png'
-        ];
-        $patrocinadores[] = (object)[
-            'site_url' => 'https://www.br.mahle.com/pt/',
-            'logo_url' => '/img/mahle-bordadeiras-do-brasil-27-05-24-225021_1987.png'
+            'logo_url' => '/img/ABA APOIADORES_PATROCÍNIO.png'
         ];
 
         $parceiros = [];

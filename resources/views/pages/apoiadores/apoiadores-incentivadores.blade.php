@@ -1,4 +1,3 @@
-<x-title text=""/>
 <div class="container">
     <div class="row">
         @foreach($incentivadores as $incentivador)
