@@ -10,7 +10,7 @@ use App\Http\Controllers\NossaHistoriaController;
 use App\Http\Controllers\NoticiasController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/nossa-historia', [NossaHistoriaController::class, 'index'])->name('nossa-historia');
 Route::get('/encontre-uma-bordadeira', [EncontreUmaBordadeiraController::class, 'index'])->name('encontre-uma-bordadeira');
