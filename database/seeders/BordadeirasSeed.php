@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -18,7 +17,7 @@ class BordadeirasSeed extends Seeder
                 'banner_url' => '/img/g_Lilian-Regina-Borges-Peres-Itaya-bordadeiras-do-Brasil-17-06-24-133442-1998_2.jpg',
                 'thumbnail_url' => '/img/q_Lilian-Regina-Borges-Peres-Itaya-bordadeiras-do-Brasil-17-06-24-133442-1998.jpg',
                 'nome' => 'Lilian Regina Borges Peres Itaya',
-                'content' => '',
+                'content' => 'Já faço bordado em linha desde os meus 20 anos, mas sempre como uma atividade recreativa, tendo parado de fazer nos últimos anos. Ao ver o curso, me perguntei: por que não? E me surpreendi com o bordado em pedrarias. Voltar a bordar me ajudou a superar um trauma emocional e, quem sabe, poderá representar uma fonte de renda.',
                 'images' => json_encode(['/img/g_Lilian-Regina-Borges-Peres-Itaya-bordadeiras-do-Brasil-17-06-24-133442-1998_2.jpg']),
                 'cidade_id' => 3509502,
                 'instagram' => '',
