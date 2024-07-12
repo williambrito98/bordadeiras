@@ -2,7 +2,7 @@
     @include('pages.components.breadcrumb', ['title' => $title])
     @include('pages.components.link-destacado', [
         'url' => 'https://www.projetosestrategicos.com.br/contato.php',
-        'text' => 'Clique aqui para saber como investir neste projeto'
+        'text' => 'Saiba como levar este projeto para a sua cidade, clicando aqui.'
     ])
     @include('pages.contato.contato-social-medias')
 </x-default-layout>
