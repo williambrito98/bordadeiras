@@ -23,7 +23,7 @@
                         Indaiatuba/SP e Mogi Guaçu/SP.
                         <br>
                         <br>
-                        EEm 2023, deu-se início à criação desta Plataforma, Bordadeiras do Brasil, com a proposta de
+                        Em 2023, deu-se início à criação desta Plataforma, Bordadeiras do Brasil, com a proposta de
                         possibilitar a divulgação do trabalho das participantes dos cursos realizados no projeto, que
                         tenham a intenção de dar continuidade a trabalhos na área, junto à pessoas e empresas
                         interessadas na mão de obra com o bordado em pedrarias.
@@ -49,14 +49,6 @@
                         adquirido durante a formação, poderão ter o seu material nesta plataforma, de acordo com uma
                         análise feita pela própria Fernanda junto à sua equipe, no intuito de divulgar os seus
                         trabalhos, para que interessados possam entrar em contato diretamente com as alunas do projeto.
-                        <br>
-                        <br>
-                        A própria Fernanda analisará o material recebido por cada aluna,
-                        observando a habilidade com os pontos, o cuidado com o material trabalhado e a responsabilidade
-                        com os prazos propostos durante a formação. As alunas que atingirem ao esperado e que
-                        pretenderem seguir se especializando, poderão ter o bordado realizado na formação aqui na
-                        plataforma, junto do seu contato, para que interessados possam entrar em contato diretamente com
-                        elas.
                     </p>
 
                 </div>

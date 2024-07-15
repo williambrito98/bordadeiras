@@ -24,7 +24,7 @@ class BordadeirasSeed extends Seeder
                 'email' => '',
                 'facebook' => '',
                 'youtube' => '',
-                'whatsapp' => '',
+                'whatsapp' => 'https://wa.me/19993693043',
                 'linkedin' => '',
                 'created_at' => now(),
             ],
