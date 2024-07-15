@@ -34,7 +34,7 @@ class BordadeirasSeed extends Seeder
                 'nome' => 'Rosilene Aparecida Mendes',
                 'content' => 'Atualmente trabalho com bijuterias. Sou apaixonada pelos acessórios em miçangas, strass e lantejoulas. Logo após conhecer o bordado em pedrarias da Fernanda, a minha paixão só cresceu. Sinto enorme prazer em trabalhar com elas. Amo o efeito, o brilho e as formas que são possíveis de se realizar através delas.',
                 'images' => json_encode(['/img/g_Rosilene-Aparecida-Mendes-bordadeiras-do-Brasil-17-06-24-134345-1999_2.jpg']),
-                'cidade_id' => 3509502,
+                'cidade_id' => 3136207,
                 'instagram' => 'https://www.bordadeirasdobrasil.com.br/@labellerosi',
                 'email' => '',
                 'facebook' => '',
