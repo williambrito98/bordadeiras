@@ -18,6 +18,5 @@ jobs:
         run: |
             echo "${SSH_PRIVATE_KEY}" > private_key
             chmod 600 private_key
-            rsync -avz -e "ssh -i private_key -o StrictHostKeyChecking=no" --exclude=node_modules --exclude=storage --exclude=vendor . ${USERNAME}@${HOST}:/home/user/htdocs/bordadeiras
-            ssh -i private_key -o StrictHostKeyChecking=no ${USERNAME}@${HOST} "cd /home/user/htdocs/bordadeiras && composer install --no-dev && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache"
+            ssh -i private_key -o StrictHostKeyChecking=no ${USERNAME}@${HOST} "cd /home/user/htdocs/bordadeiras && git pull && composer install --no-dev && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache"
             rm private_key
