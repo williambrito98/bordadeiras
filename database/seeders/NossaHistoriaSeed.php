@@ -58,7 +58,7 @@ class NossaHistoriaSeed extends Seeder
             [
                 'title' => 'Como contatar as Bordadeiras',
                 'subtitle' => '',
-                'content' => '<p style="font-size: 13px" align="justify">Na aba “Encontre uma Bordadeira”, você terá acesso aos bordados realizados pelas alunas bem avaliadas pela Fernanda durante os cursos. Ao clicar na imagem que mais lhe interessa, você terá acesso ao contato e uma breve descrição sobre a bordadeira que realizou o bordado escolhido. Basta acessar suas redes e/ou contatá-la para maiores informações sobre o seu trabalho.</p>',
+                'content' => '<p style="font-size: 13px" align="justify">Na aba da Plataforma “Encontre uma bordadeira” a pessoa ou empresa interessada em contratar serviço de bordado em pedrarias poderá acessar as bordadeiras cadastradas através dos seus contatos e redes sociais, além de conhecer um pouco da história de cada uma</p>',
                 'thumbnail' => '',
                 'facebook' => '',
                 'instagram' => '',
