@@ -18,5 +18,5 @@ jobs:
         run: |
             echo "${SSH_PRIVATE_KEY}" > private_key
             chmod 600 private_key
-            ssh -i private_key -o StrictHostKeyChecking=no ${USERNAME}@${HOST} "cd /home/user/htdocs/bordadeiras && git pull && composer install --no-dev && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache"
+            ssh -i private_key -o StrictHostKeyChecking=no ${USERNAME}@${HOST} "cd /home/user/htdocs/bordadeiras && git pull && composer install --no-dev && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan db:seed"
             rm private_key
