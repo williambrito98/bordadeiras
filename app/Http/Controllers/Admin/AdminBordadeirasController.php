@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\AdminUpdateBordadeirasRequest;
 use App\Http\Requests\Admin\UploadImagesRequest;
 use App\Http\Requests\Admin\UploadThumbnailRequest;
@@ -11,7 +10,7 @@ use App\Models\Cidades;
 use App\Models\Estados;
 use Illuminate\Http\Request;
 
-class AdminBordadeirasController extends Controller
+class AdminBordadeirasController extends BaseController
 {
     /**
      * Display a listing of the resource.

@@ -44,7 +44,7 @@ class ApoiadoresController extends Controller
         ];
 
 
-        return view('pages.apoiadores.apoiadores', [
+        return $this->view('pages.apoiadores.apoiadores', [
             'title' => $this->title,
             'incentivadores' => $incentivadores,
             'patrocinadores' => $patrocinadores,

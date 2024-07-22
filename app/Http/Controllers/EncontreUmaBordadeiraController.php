@@ -14,6 +14,7 @@ class EncontreUmaBordadeiraController extends Controller
 
         $bordadeiras = Bordadeiras::all();
 
-        return view('pages.encontre-uma-bordadeira.encontre-uma-bordadeira', compact('title', 'description', 'bordadeiras'));
+
+        return $this->view('pages.encontre-uma-bordadeira.encontre-uma-bordadeira', compact(['title', 'description', 'bordadeiras']));
     }
 }

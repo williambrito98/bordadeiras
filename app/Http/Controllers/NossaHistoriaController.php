@@ -12,6 +12,7 @@ class NossaHistoriaController extends Controller
 
         $posts = NossaHistoria::all();
 
-        return view('pages.nossa-historia.nossa-historia', compact('posts', 'title'));
+
+        return $this->view('pages.nossa-historia.nossa-historia', compact(['title', 'posts']));
     }
 }

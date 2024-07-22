@@ -10,7 +10,7 @@ class BordadeiraController extends Controller
     {
         $title = 'Bordadeiras';
 
-        return view('pages.bordadeiras.bordadeira', [
+        return $this->view('pages.bordadeiras.bordadeira', [
             'title' => $title,
             'bordadeira' => $bordadeira,
         ]);

@@ -8,7 +8,7 @@ class ContatoController extends Controller
 
     public function index()
     {
-        return view('pages.contato.contato', [
+        return $this->view('pages.contato.contato', [
             'title' => $this->title,
         ]);
     }

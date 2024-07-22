@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Contato;
 use Illuminate\Http\Request;
 
-class AdminContatoController extends Controller
+class AdminContatoController extends BaseController
 {
     /**
      * Display a listing of the resource.

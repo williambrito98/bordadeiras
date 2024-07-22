@@ -12,7 +12,8 @@ class NoticiasController extends Controller
     {
         $noticias = Noticias::all();
 
-        return view('pages.noticias.noticias', [
+
+        return $this->view('pages.noticias.noticias', [
             'title' => $this->title,
             'noticias' => $noticias,
         ]);

@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminBordadeirasController;
 use App\Http\Controllers\Admin\AdminContatoController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EstadosController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\ApoiadoresController;
 use App\Http\Controllers\BordadeiraController;
 use App\Http\Controllers\ContatoController;
@@ -11,7 +12,6 @@ use App\Http\Controllers\EncontreUmaBordadeiraController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NossaHistoriaController;
 use App\Http\Controllers\NoticiasController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);

@@ -5,5 +5,5 @@
     @include('pages.home.home-depoimentos', ['depoimentos' => $depoimentos])
     @include('pages.home.home-bordadeiras', ['bordadeiras' => $bordadeiras])
     @include('pages.components.banner')
-    @include('pages.components.contato')
+    @include('pages.components.contato', ['contato' => $contato])
 </x-default-layout>

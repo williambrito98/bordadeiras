@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Models\Estados;
 
-class EstadosController extends Controller
+class EstadosController extends BaseController
 {
     public function getCidades(Estados $estado)
     {

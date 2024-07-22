@@ -57,6 +57,6 @@ class HomeController extends Controller
 
         $bordadeiras = Bordadeiras::all();
 
-        return view('pages.home.home', compact(['title', 'noticias', 'slider', 'depoimentos', 'bordadeiras']));
+        return $this->view('pages.home.home', compact(['title', 'noticias', 'slider', 'depoimentos', 'bordadeiras']));
     }
 }
