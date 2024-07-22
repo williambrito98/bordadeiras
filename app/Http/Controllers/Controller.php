@@ -24,7 +24,7 @@ abstract class Controller
         }
     }
 
-    protected function flash(string $type, string $route)
+    protected function flashMessage(string $type, string $route)
     {
         if ($type === 'error') {
             return redirect()->route($route)->with('message', 'Erro ao realizar operação')->with('type', 'danger');

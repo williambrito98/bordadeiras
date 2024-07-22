@@ -79,7 +79,7 @@ class AdminBordadeirasController extends Controller
 
         $bordadeira->save();
 
-        return $this->flash('success', 'admin.bordadeiras.index');
+        return $this->flashMessage('success', 'admin.bordadeiras.index');
     }
 
     /**

@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             DepoimentosSeed::class,
             BordadeirasSeed::class,
             RedesSociaisSeed::class,
-            NossaHistoriaSeed::class
+            NossaHistoriaSeed::class,
+            ContatoSeed::class
         ]);
     }
 

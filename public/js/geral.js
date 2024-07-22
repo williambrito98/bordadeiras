@@ -11,6 +11,10 @@ $(document).ready(function () {
     })
 
     $(document).on('change', '.select-estado', onChangeSelectEstado);
+
+    $(document).on('submit', 'form', function () {
+        showLoading();
+    })
 })
 
 function showNotification(message, type = 'success') {

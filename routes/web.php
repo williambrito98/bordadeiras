@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminBordadeirasController;
+use App\Http\Controllers\Admin\AdminContatoController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EstadosController;
 use App\Http\Controllers\ApoiadoresController;
@@ -48,9 +49,14 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::get('/estado/{estado}/cidades', [EstadosController::class, 'getCidades'])->name('admin.estado.cidades');
 
+
+    Route::get('/contato', [AdminContatoController::class, 'index'])->name('admin.contato.index');
+    Route::put('/contato', [AdminContatoController::class, 'update'])->name('admin.contato.update');
+
     Route::fallback(function () {
         return redirect()->route('admin');
     });
+
 
 });
 
