@@ -10,7 +10,7 @@ class Cidades extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nome',
+        'nome'
     ];
 
     public function estado()

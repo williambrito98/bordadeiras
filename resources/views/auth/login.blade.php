@@ -12,7 +12,7 @@
 <body>
 <div class="login-container">
     <h2>Painel de Controle</h2>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('login') }}">
         @csrf
         <div class="input-group">
             <label for="name">Email</label>
