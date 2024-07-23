@@ -84,6 +84,6 @@
     font-weight: bold;
     display: none; /* Inicialmente escondido */
 }
-.remove-file-preview-upload {
-
+table td, table th {
+    vertical-align: middle !important;/* Centraliza verticalmente */
 }

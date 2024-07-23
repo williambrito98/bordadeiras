@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Utils\StringUtils;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -33,5 +34,23 @@ class Bordadeiras extends Model
     public function cidade()
     {
         return $this->belongsTo(Cidades::class);
+    }
+
+    protected static function boot(): void
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            self::onSave($model);
+        });
+
+        static::updating(function ($model) {
+            self::onSave($model);
+        });
+    }
+
+    private static function onSave(&$model): void
+    {
+        $model->content = StringUtils::removeJavascriptTags($model->content);
     }
 }

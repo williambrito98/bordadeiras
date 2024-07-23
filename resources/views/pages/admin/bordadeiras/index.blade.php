@@ -1,6 +1,12 @@
 <x-app-layout>
     @section('content_header')
-        <h1>Bordadeiras</h1>
+        <div class="d-flex justify-content-between">
+            <h1>Bordadeiras</h1>
+            <a href="{{ route('admin.bordadeiras.create') }}" class="btn btn-info">
+                <i class="fas fa-plus"></i>
+                Adicionar
+            </a>
+        </div>
     @stop
 
     @section('content')
@@ -17,14 +23,15 @@
                 <tr>
                     <td>{{ $bordadeira->nome }}</td>
                     <td>
-                        <img src="{{ $bordadeira->thumbnail_url }}" class="rounded-circle w-100px h-100px object-cover">
+                        <img src="{{ $bordadeira->thumbnail_url }}" alt="" class="rounded-circle w-100px h-100px object-cover">
                     </td>
-                    <td class="d-flex justify-content-center align-items-center">
+                    <td class="text-center">
                         <a href="{{ route('admin.bordadeiras.edit', ['bordadeira' => $bordadeira->id]) }}"
-                           class="btn btn-primary mx-3">
+                           class="btn btn-success mx-3">
                             <i class="fas fa-pencil-alt"></i>
                         </a>
-                        <a href="" data-toggle="modal" data-target="#confirm-bordadeira-delete" class="btn btn-danger btnDelete"
+                        <a href="" data-toggle="modal" data-target="#confirm-bordadeira-delete"
+                           class="btn btn-danger btnDelete"
                            data-url="{{ route('admin.bordadeiras.destroy', ['bordadeira' => $bordadeira->id]) }}">
                             <i class="fas fa-trash"></i>
                         </a>

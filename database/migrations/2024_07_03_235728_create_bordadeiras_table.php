@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('banner_url');
             $table->string('nome');
             $table->string('thumbnail_url');
-            $table->text('content');
+            $table->text('content')->nullable(true);
             $table->json('images');
             $table->string('whatsapp')->nullable(true);
             $table->string('email')->nullable(true);

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\Admin\AdminStoreBordadeirasRequest;
 use App\Http\Requests\Admin\AdminUpdateBordadeirasRequest;
 use App\Http\Requests\Admin\UploadImagesRequest;
 use App\Http\Requests\Admin\UploadThumbnailRequest;
@@ -26,14 +27,40 @@ class AdminBordadeirasController extends BaseController
      */
     public function create()
     {
-        //
+        $estados = Estados::all();
+
+        return view('pages.admin.bordadeiras.create', compact(['estados']));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(AdminStoreBordadeirasRequest $request)
     {
+
+        $data = $request->all();
+        $bordadeira = new Bordadeiras();
+        $bordadeira->nome = $data['nome'];
+        $bordadeira->content = $data['content'];
+        $bordadeira->cidade_id = $data['cidade'];
+        $bordadeira->email = $data['email'];
+        $bordadeira->instagram = $data['instagram'];
+        $bordadeira->facebook = $data['facebook'];
+        $bordadeira->youtube = $data['youtube'];
+        $bordadeira->whatsapp = $data['whatsapp'];
+        $bordadeira->linkedin = $data['linkedin'];
+
+        $bannerUrl = $this->upload('local', $request, 'banner');
+        $thumbnailUrl = $this->upload('local', $request, 'thumbnail');
+        $images = $this->upload('local', $request, 'images');
+
+        $bordadeira->banner_url = $bannerUrl;
+        $bordadeira->thumbnail_url = $thumbnailUrl;
+        $bordadeira->images = $images;
+
+        $bordadeira->save();
+
+        return $this->flashMessage('success', 'admin.bordadeiras.index');
 
 
     }

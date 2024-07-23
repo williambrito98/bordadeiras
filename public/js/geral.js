@@ -53,6 +53,7 @@ function fileUpload(id) {
     const initialFiles = JSON.parse(imageUpload.getAttribute('data-initial-files'))
     const urlAdd = imageUpload.getAttribute('data-url-add');
     const urlDelete = imageUpload.getAttribute('data-url-delete');
+    const enableAutoUpload = imageUpload.getAttribute('data-enable-auto-upload');
 
     let images = initialFiles.filter(file => file).map(file => {
         addImage(file);
@@ -69,8 +70,16 @@ function fileUpload(id) {
         }
     });
 
-    imageUpload.addEventListener('change', function (e) {
+    imageUpload.addEventListener('change', function () {
         const files = Array.from(this.files);
+
+
+        console.log(files)
+        if (!files.length) {
+            removeAllImagesContainer();
+            imagePreviewDefaultText.style.display = "block";
+            return;
+        }
 
         for (const file of files) {
             const reader = new FileReader();
@@ -80,6 +89,10 @@ function fileUpload(id) {
                 // Check if the image is already added
                 if (!images.includes(imgSrc)) {
                     images.push(imgSrc);
+
+                    if (!enableAutoUpload) {
+                        return addImage(imgSrc);
+                    }
 
                     const formData = new FormData();
                     formData.append("file", file);
@@ -124,7 +137,29 @@ function fileUpload(id) {
     function removeFilePreview(event) {
         event.stopPropagation();  // Prevent the click event from bubbling up
         const imgContainer = event.target.parentElement;
-        let src = event.target.previousElementSibling.src;
+        const src = event.target.previousElementSibling.src;
+        const index = +images.indexOf(src);
+
+        if (!enableAutoUpload) {
+            imgContainer.remove();
+            images = images.filter(image => image !== src);
+
+            const dataTransfer = new DataTransfer()
+            for (const [i, file] of Object.entries(imageUpload.files)) {
+                if (index !== +i) {
+                    dataTransfer.items.add(file)
+                }
+            }
+
+            imageUpload.files = dataTransfer.files
+
+            // Show default text if no images are left
+            if (images.length === 0) {
+                imagePreviewDefaultText.style.display = "block";
+            }
+
+            return;
+        }
 
         $.ajax({
             url: urlDelete,
@@ -141,7 +176,7 @@ function fileUpload(id) {
             beforeSend: function () {
                 showLoading();
             },
-            success: function (data) {
+            success: function () {
                 imgContainer.remove();
                 images = images.filter(image => image !== src);
 
@@ -160,12 +195,16 @@ function fileUpload(id) {
 
     }
 
+    function removeAllImagesContainer() {
+        document.querySelectorAll(`.image-container-${id}`).forEach(imgContainer => {
+            imgContainer.remove();
+        });
+    }
+
 
     function addImage(src) {
         if (!imageUpload.multiple) {
-            document.querySelectorAll(`.image-container-${id}`).forEach(imgContainer => {
-                imgContainer.remove();
-            });
+            removeAllImagesContainer()
         }
 
         const imgContainer = document.createElement('div');
