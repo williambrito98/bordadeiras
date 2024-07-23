@@ -313,7 +313,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Home',
-                    'url' => '#',
+                    'url' => '/admin/home',
                 ],
     //                [
     //                    'text' => 'Nossa História',

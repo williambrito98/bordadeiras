@@ -17,5 +17,5 @@
 @endphp
 {{-- Minimal --}}
 <x-adminlte-text-editor :label="$label" :name="$name" :config="$config">
-    {{ $content }}
+    {{ $content ?? '' }}
 </x-adminlte-text-editor>

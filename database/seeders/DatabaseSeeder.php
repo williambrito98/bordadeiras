@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             BordadeirasSeed::class,
             RedesSociaisSeed::class,
             NossaHistoriaSeed::class,
-            ContatoSeed::class
+            ContatoSeed::class,
+            HomeSecaoSeed::class
         ]);
     }
 

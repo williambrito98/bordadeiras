@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Bordadeiras;
 use App\Models\Depoimentos;
+use App\Models\HomeSecao;
 use App\Models\Noticias;
 
 class HomeController extends Controller
@@ -14,8 +15,6 @@ class HomeController extends Controller
     public function index()
     {
         $title = 'Home';
-
-        $noticias = Noticias::all();
 
         $slider = [];
 
@@ -54,9 +53,10 @@ class HomeController extends Controller
         ];
 
         $depoimentos = Depoimentos::all();
-
         $bordadeiras = Bordadeiras::all();
+        $noticias = Noticias::all();
+        $homeSecao = HomeSecao::all();
 
-        return $this->view('pages.home.home', compact(['title', 'noticias', 'slider', 'depoimentos', 'bordadeiras']));
+        return $this->view('pages.home.home', compact(['title', 'noticias', 'slider', 'depoimentos', 'bordadeiras', 'homeSecao']));
     }
 }

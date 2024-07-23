@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminBordadeirasController;
 use App\Http\Controllers\Admin\AdminContatoController;
+use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EstadosController;
 use App\Http\Controllers\Admin\ProfileController;
@@ -48,6 +49,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('/bordadeiras/{bordadeira}/banner/delete', [AdminBordadeirasController::class, 'deleteBanner'])->name('admin.bordadeiras.banner.delete');
 
     Route::get('/estado/{estado}/cidades', [EstadosController::class, 'getCidades'])->name('admin.estado.cidades');
+
+    Route::get('/home', [AdminHomeController::class, 'index'])->name('admin.home');
+    Route::put('/home', [AdminHomeController::class, 'update'])->name('admin.home.update');
 
 
     Route::get('/contato', [AdminContatoController::class, 'index'])->name('admin.contato.index');
