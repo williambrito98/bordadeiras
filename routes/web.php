@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminBordadeirasController;
 use App\Http\Controllers\Admin\AdminContatoController;
 use App\Http\Controllers\Admin\AdminDepoimentosController;
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminUsersController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EstadosController;
 use App\Http\Controllers\Admin\ProfileController;
@@ -62,6 +63,16 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         'edit' => 'admin.depoimentos.edit',
         'update' => 'admin.depoimentos.update',
         'destroy' => 'admin.depoimentos.destroy'
+    ]);
+
+    Route::resource('/users', AdminUsersController::class)->names([
+        'create' => 'admin.users.create',
+        'index' => 'admin.users.index',
+        'store' => 'admin.users.store',
+        'show' => 'admin.users.show',
+        'edit' => 'admin.users.edit',
+        'update' => 'admin.users.update',
+        'destroy' => 'admin.users.destroy'
     ]);
 
 

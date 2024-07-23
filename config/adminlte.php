@@ -313,6 +313,11 @@ return [
             'icon' => 'fas fa-comments'
         ],
         [
+            'text' => 'Usuários',
+            'url' => 'admin/users',
+            'icon' => 'fas fa-user'
+        ],
+        [
             'text' => 'Páginas',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
