@@ -11,10 +11,10 @@
     @section('content')
         <div>
             <form action="{{ route('admin.bordadeiras.update', ['bordadeira' => $bordadeira->id]) }}" method="post"
-                  class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6" id="form">
+                  class="mx-auto" id="form">
                 @csrf
                 @method('PUT')
-                <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
+                <div class="p-4 bg-white shadow">
                     <div class="row">
                         <div class="col-md-12">
                             <x-adminlte-input name="nome" label="Nome" value="{{ $bordadeira->nome }}"

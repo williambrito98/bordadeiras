@@ -305,7 +305,12 @@ return [
         [
             'text' => 'Bordadeiras',
             'url' => 'admin/bordadeiras',
-            'icon' => 'far fa-fw fa-file'
+            'icon' => 'fas fa-pencil-ruler'
+        ],
+        [
+            'text' => 'Depoimentos',
+            'url' => 'admin/depoimentos',
+            'icon' => 'fas fa-comments'
         ],
         [
             'text' => 'Páginas',
@@ -315,22 +320,22 @@ return [
                     'text' => 'Home',
                     'url' => '/admin/home',
                 ],
-    //                [
-    //                    'text' => 'Nossa História',
-    //                    'url' => '#',
-    //                ],
-    //                [
-    //                    'text' => 'Encontre uma Bordadeiras',
-    //                    'url' => '#',
-    //                ],
-    //                [
-    //                    'text' => 'Apoiadores',
-    //                    'url' => '#',
-    //                ],
-    //                [
-    //                    'text' => 'Noticia',
-    //                    'url' => '#',
-    //                ],
+                //                [
+                //                    'text' => 'Nossa História',
+                //                    'url' => '#',
+                //                ],
+                //                [
+                //                    'text' => 'Encontre uma Bordadeiras',
+                //                    'url' => '#',
+                //                ],
+                //                [
+                //                    'text' => 'Apoiadores',
+                //                    'url' => '#',
+                //                ],
+                //                [
+                //                    'text' => 'Noticia',
+                //                    'url' => '#',
+                //                ],
                 [
                     'text' => 'Contato',
                     'url' => '/admin/contato',

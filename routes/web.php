@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminBordadeirasController;
 use App\Http\Controllers\Admin\AdminContatoController;
+use App\Http\Controllers\Admin\AdminDepoimentosController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EstadosController;
@@ -52,6 +53,16 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::get('/home', [AdminHomeController::class, 'index'])->name('admin.home');
     Route::put('/home', [AdminHomeController::class, 'update'])->name('admin.home.update');
+
+    Route::resource('/depoimentos', AdminDepoimentosController::class)->names([
+        'create' => 'admin.depoimentos.create',
+        'index' => 'admin.depoimentos.index',
+        'store' => 'admin.depoimentos.store',
+        'show' => 'admin.depoimentos.show',
+        'edit' => 'admin.depoimentos.edit',
+        'update' => 'admin.depoimentos.update',
+        'destroy' => 'admin.depoimentos.destroy'
+    ]);
 
 
     Route::get('/contato', [AdminContatoController::class, 'index'])->name('admin.contato.index');
