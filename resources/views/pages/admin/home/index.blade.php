@@ -24,7 +24,8 @@
 
                     <div class="row mt-5">
                         <div class="col-md-12">
-                            <x-textarea label="Conteudo" :content="$secao->conteudo" id="conteudo" name="conteudo[]"/>
+                            <x-textarea label="Conteudo" :content="$secao->conteudo" id="conteudo-{{$secao->id}}"
+                                        name="conteudo[]"/>
                         </div>
                     </div>
 

@@ -59,7 +59,7 @@ function fileUpload(id) {
         addImage(file);
         return file;
     });
-
+    
     if (images.length) {
         imagePreviewDefaultText.style.display = "none";
     }
@@ -74,7 +74,6 @@ function fileUpload(id) {
         const files = Array.from(this.files);
 
 
-        console.log(files)
         if (!files.length) {
             removeAllImagesContainer();
             imagePreviewDefaultText.style.display = "block";

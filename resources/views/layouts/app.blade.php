@@ -15,21 +15,16 @@
 
     <link rel="stylesheet" href="/css/admin.css">
 
-    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
-
-    <script src="/js/bootstrap/popper.min.js"></script>
-    <script src="/js/bootstrap/bootstrap.min.js"></script>
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-
-    <script src="/js/geral.js"></script>
 
 
 </head>
 <body class="font-sans antialiased">
 @extends('adminlte::page')
+@section('js')
+    <script src="/js/geral.js"></script>
+@stop
 <main>
     {{ $slot }}
 </main>
@@ -40,13 +35,15 @@
     </div>
 </div>
 
-<script>
-    $(document).ready(function () {
-        @if(session('type'))
-        showNotification('{{ session('message') }}', '{{ session('type') }}');
-        @endif
-    });
-</script>
+@push('js')
+    <script>
+        $(document).ready(function () {
+            @if(session('type'))
+            showNotification('{{ session('message') }}', '{{ session('type') }}');
+            @endif
+        });
+    </script>
+@endpush
 
 </body>
 </html>
