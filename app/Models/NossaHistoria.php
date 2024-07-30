@@ -22,7 +22,8 @@ class NossaHistoria extends Model
         'youtube',
         'portifolio',
         'content',
-        'user_id'
+        'user_id',
+        'whatsapp'
     ];
 
     public function user()

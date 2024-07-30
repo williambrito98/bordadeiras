@@ -59,7 +59,7 @@ function fileUpload(id) {
         addImage(file);
         return file;
     });
-    
+
     if (images.length) {
         imagePreviewDefaultText.style.display = "none";
     }

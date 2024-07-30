@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminBordadeirasController;
 use App\Http\Controllers\Admin\AdminContatoController;
 use App\Http\Controllers\Admin\AdminDepoimentosController;
 use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminNossaHistoriaController;
 use App\Http\Controllers\Admin\AdminUsersController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EstadosController;
@@ -13,7 +14,6 @@ use App\Http\Controllers\BordadeiraController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\EncontreUmaBordadeiraController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\NossaHistoriaController;
 use App\Http\Controllers\NoticiasController;
 use Illuminate\Support\Facades\Route;
 
@@ -74,6 +74,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         'update' => 'admin.users.update',
         'destroy' => 'admin.users.destroy'
     ]);
+
+    Route::get('/nossa-historia', [AdminNossaHistoriaController::class, 'index'])->name('admin.nossa-historia.index');
+    Route::put('/nossa-historia', [AdminNossaHistoriaController::class, 'update'])->name('admin.nossa-historia.update');
+    Route::post('/nossa-historia/{nossaHistoria}/thumbnail/upload', [AdminNossaHistoriaController::class, 'uploadThumbail'])->name('admin.nossa-historia.thumbnail.upload');
+    Route::post('/nossa-historia/{nossaHistoria}/thumbnail/delete', [AdminNossaHistoriaController::class, 'deleteThumbnail'])->name('admin.nossa-historia.thumbnail.delete');
 
 
     Route::get('/contato', [AdminContatoController::class, 'index'])->name('admin.contato.index');

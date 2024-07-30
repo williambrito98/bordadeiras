@@ -325,6 +325,10 @@ return [
                     'text' => 'Home',
                     'url' => '/admin/home',
                 ],
+                [
+                    'text' => 'Nossa História',
+                    'url' => '/admin/nossa-historia',
+                ],
                 //                [
                 //                    'text' => 'Nossa História',
                 //                    'url' => '#',
