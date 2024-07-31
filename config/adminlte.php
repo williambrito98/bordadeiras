@@ -329,6 +329,10 @@ return [
                     'text' => 'Nossa História',
                     'url' => '/admin/nossa-historia',
                 ],
+                [
+                    'text' => 'Apoiadores',
+                    'url' => '/admin/apoiadores'
+                ],
                 //                [
                 //                    'text' => 'Nossa História',
                 //                    'url' => '#',

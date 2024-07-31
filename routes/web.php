@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminApoiadoresController;
 use App\Http\Controllers\Admin\AdminBordadeirasController;
 use App\Http\Controllers\Admin\AdminContatoController;
 use App\Http\Controllers\Admin\AdminDepoimentosController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\BordadeiraController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\EncontreUmaBordadeiraController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NossaHistoriaController;
 use App\Http\Controllers\NoticiasController;
 use Illuminate\Support\Facades\Route;
 
@@ -79,6 +81,16 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::put('/nossa-historia', [AdminNossaHistoriaController::class, 'update'])->name('admin.nossa-historia.update');
     Route::post('/nossa-historia/{nossaHistoria}/thumbnail/upload', [AdminNossaHistoriaController::class, 'uploadThumbail'])->name('admin.nossa-historia.thumbnail.upload');
     Route::post('/nossa-historia/{nossaHistoria}/thumbnail/delete', [AdminNossaHistoriaController::class, 'deleteThumbnail'])->name('admin.nossa-historia.thumbnail.delete');
+
+    Route::get('/apoiadores', [AdminApoiadoresController::class, 'index'])->name('admin.apoiadores.index');
+    Route::post('/apoiadores/incentivadores/upload', [AdminApoiadoresController::class, 'updateIncentivadores'])->name('admin.apoiadores.incentivadores.upload');
+    Route::post('/apoiadores/incentivadores/delete', [AdminApoiadoresController::class, 'deleteIncentivadores'])->name('admin.apoiadores.incentivadores.delete');
+    Route::post('/apoiadores/patrocinadores/upload', [AdminApoiadoresController::class, 'updatePatrocinadores'])->name('admin.apoiadores.patrocinadores.upload');
+    Route::post('/apoiadores/patrocinadores/delete', [AdminApoiadoresController::class, 'deletePatrocinadores'])->name('admin.apoiadores.patrocinadores.delete');
+    Route::post('/apoiadores/parceiros/upload', [AdminApoiadoresController::class, 'updateParceiros'])->name('admin.apoiadores.parceiros.upload');
+    Route::post('/apoiadores/parceiros/delete', [AdminApoiadoresController::class, 'deleteParceiros'])->name('admin.apoiadores.parceiros.delete');
+    Route::post('/apoiadores/realizadores/upload', [AdminApoiadoresController::class, 'updateRealizadores'])->name('admin.apoiadores.realizadores.upload');
+    Route::post('/apoiadores/realizadores/delete', [AdminApoiadoresController::class, 'deleteRealizadores'])->name('admin.apoiadores.realizadores.delete');
 
 
     Route::get('/contato', [AdminContatoController::class, 'index'])->name('admin.contato.index');

@@ -7,8 +7,8 @@
                 <div class="single-post wow fadeInUp" data-wow-delay="0.1s"
                      style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                     <div class="post-thumb">
-                        <a href="{{$parceiro->site_url}}" target="_blank">
-                            <img src="{{$parceiro->logo_url}}" style=" padding: 0; margin: 0; " alt="">
+                        <a href="{{$parceiro['site_url']}}" target="_blank">
+                            <img src="{{$parceiro['logo_url']}}" style=" padding: 0; margin: 0; " alt="">
                         </a>
                     </div>
                 </div>

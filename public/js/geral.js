@@ -54,6 +54,8 @@ function fileUpload(id) {
     const urlAdd = imageUpload.getAttribute('data-url-add');
     const urlDelete = imageUpload.getAttribute('data-url-delete');
     const enableAutoUpload = imageUpload.getAttribute('data-enable-auto-upload');
+    const showInput = imageUpload.getAttribute('data-show-input');
+    let inputValue = JSON.parse(imageUpload.getAttribute('data-input-value'));
 
     let images = initialFiles.filter(file => file).map(file => {
         addImage(file);
@@ -112,7 +114,10 @@ function fileUpload(id) {
                             addImage(data.url)
                         },
                         error: function (error) {
-                            console.log(error)
+                            const errors = JSON.parse(error.responseText)?.errors?.file
+                            errors.forEach(error => {
+                                showNotification(error, 'error');
+                            })
                         },
                         complete: function () {
                             hideLoading();
@@ -160,15 +165,16 @@ function fileUpload(id) {
             return;
         }
 
+        const formData = new FormData();
+        formData.append("image", src);
+
         $.ajax({
             url: urlDelete,
             type: 'POST',
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            data: {
-                image: src
-            },
+            data: formData,
             contentType: false,
             processData: false,
             global: true,
@@ -222,6 +228,49 @@ function fileUpload(id) {
         imgContainer.appendChild(img);
         imgContainer.appendChild(removeButton);
         imagePreview.appendChild(imgContainer);
+
+        if (showInput === 'true') {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.name = 'input';
+            input.value = inputValue[0] ?? '';
+            input.classList.add('form-control', 'mt-1')
+            inputValue = inputValue.slice(1);
+            input.addEventListener('change', function (e) {
+                const value = e.target.value;
+
+                const formData = new FormData();
+                formData.append("file", src);
+                formData.append("input", value);
+
+
+                $.ajax({
+                    url: urlAdd,
+                    type: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    global: true,
+                    beforeSend: function () {
+                        showLoading();
+                    },
+                    success: function (data) {
+                        showNotification('Salvo com sucesso');
+                    },
+                    error: function (error) {
+                        console.log(error)
+                        showNotification('Erro ao salvar', 'error')
+                    },
+                    complete: function () {
+                        hideLoading();
+                    }
+                });
+            })
+            imgContainer.appendChild(input);
+        }
 
     }
 
