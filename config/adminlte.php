@@ -333,22 +333,10 @@ return [
                     'text' => 'Apoiadores',
                     'url' => '/admin/apoiadores'
                 ],
-                //                [
-                //                    'text' => 'Nossa História',
-                //                    'url' => '#',
-                //                ],
-                //                [
-                //                    'text' => 'Encontre uma Bordadeiras',
-                //                    'url' => '#',
-                //                ],
-                //                [
-                //                    'text' => 'Apoiadores',
-                //                    'url' => '#',
-                //                ],
-                //                [
-                //                    'text' => 'Noticia',
-                //                    'url' => '#',
-                //                ],
+                [
+                    'text' => 'Noticias',
+                    'url' => '/admin/noticias',
+                ],
                 [
                     'text' => 'Contato',
                     'url' => '/admin/contato',

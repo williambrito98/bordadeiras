@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\AdminContatoController;
 use App\Http\Controllers\Admin\AdminDepoimentosController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminNossaHistoriaController;
+use App\Http\Controllers\Admin\AdminNoticiasController;
 use App\Http\Controllers\Admin\AdminUsersController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EstadosController;
@@ -91,6 +92,18 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('/apoiadores/parceiros/delete', [AdminApoiadoresController::class, 'deleteParceiros'])->name('admin.apoiadores.parceiros.delete');
     Route::post('/apoiadores/realizadores/upload', [AdminApoiadoresController::class, 'updateRealizadores'])->name('admin.apoiadores.realizadores.upload');
     Route::post('/apoiadores/realizadores/delete', [AdminApoiadoresController::class, 'deleteRealizadores'])->name('admin.apoiadores.realizadores.delete');
+
+    Route::resource('/noticias', AdminNoticiasController::class)->names([
+        'create' => 'admin.noticias.create',
+        'index' => 'admin.noticias.index',
+        'store' => 'admin.noticias.store',
+        'show' => 'admin.noticias.show',
+        'edit' => 'admin.noticias.edit',
+        'update' => 'admin.noticias.update',
+        'destroy' => 'admin.noticias.destroy'
+    ]);
+
+    Route::post('/noticias/{noticia}/banner/upload', [AdminNoticiasController::class, 'uploadBanner'])->name('admin.noticias.banner.upload');
 
 
     Route::get('/contato', [AdminContatoController::class, 'index'])->name('admin.contato.index');

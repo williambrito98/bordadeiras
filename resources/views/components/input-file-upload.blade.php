@@ -9,7 +9,7 @@
                data-url-delete="{{ $urlDelete ?? '' }}"
                data-enable-auto-upload="{{ $enableAutoUpload ?? ''}}"
                data-show-input="{{ $showInput ?? ''}}"
-               data-input-value="{{ json_encode($inputValue) }}"
+               data-input-value="{{ json_encode($inputValue ?? []) }}"
                hidden>
 
     </div>

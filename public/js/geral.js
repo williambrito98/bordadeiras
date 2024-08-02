@@ -47,6 +47,7 @@ function hideLoading() {
 
 function fileUpload(id) {
     const imageUpload = document.getElementById(id);
+    const isMultiple = imageUpload.multiple;
     const imagePreview = document.getElementById(`imagePreview-${id}`);
     const imagePreviewDefaultText = document.getElementById(`imagePreviewDefaultText-${id}`);
     const removeFilePreviewUploadButton = document.querySelector(`.remove-file-preview-upload-${id}`);
@@ -219,20 +220,22 @@ function fileUpload(id) {
         const img = document.createElement('img');
         img.setAttribute('src', src);
 
-        const removeButton = document.createElement('button');
-        removeButton.innerText = 'X';
-        removeButton.classList.add(`remove-file-preview-upload-${id}`, 'btn', 'bg-danger', 'btn-sm', 'rounded-circle');
-        removeButton.type = 'button';
-        removeButton.addEventListener('click', removeFilePreview)
+        if (urlDelete) {
+            const removeButton = document.createElement('button');
+            removeButton.innerText = 'X';
+            removeButton.classList.add(`remove-file-preview-upload-${id}`, 'btn', 'bg-danger', 'btn-sm', 'rounded-circle');
+            removeButton.type = 'button';
+            removeButton.addEventListener('click', removeFilePreview)
+            imgContainer.appendChild(removeButton);
+        }
 
         imgContainer.appendChild(img);
-        imgContainer.appendChild(removeButton);
         imagePreview.appendChild(imgContainer);
 
         if (showInput === 'true') {
             const input = document.createElement('input');
             input.type = 'text';
-            input.name = 'input';
+            input.name = isMultiple ? `input[]` : 'input';
             input.value = inputValue[0] ?? '';
             input.classList.add('form-control', 'mt-1')
             inputValue = inputValue.slice(1);
