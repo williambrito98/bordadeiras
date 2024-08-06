@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
             RedesSociaisSeed::class,
             NossaHistoriaSeed::class,
             ContatoSeed::class,
-            HomeSecaoSeed::class
+            HomeSecaoSeed::class,
+            SeoSeed::class,
         ]);
     }
 

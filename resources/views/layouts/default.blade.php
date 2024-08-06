@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ env('APP_TITLE') }} {{ $title ? ' - ' . $title : '' }}</title>
+    <meta name="description" content="{{ $seo->description }}">
+    <meta name="keywords" content="{{ $seo->keywords }}">
+    <meta name="author" content="{{ $seo->author }}">
+    <meta name="robots" content="{{ $seo->robots }}">
+    <meta property="og:title" content="{{ $seo->og_title }}">
+    <meta property="og:description" content="{{ $seo->og_description }}">
+    <meta property="og:image" content="{{ $seo->og_image }}">
+    <meta property="og:url" content="{{ $seo->og_url }}">
+    <meta property="og:type" content="{{ $seo->og_type }}">
+    <meta name="twitter:card" content="{{ $seo->twitter_card }}">
+    <meta name="twitter:title" content="{{ $seo->twitter_title }}">
+    <meta name="twitter:description" content="{{ $seo->twitter_description }}">
+    <meta name="twitter:image" content="{{ $seo->twitter_image }}">
+    <meta name="twitter:site" content="{{ $seo->twitter_site }}">
+
+    <title>{{ $seo->title  }}</title>
 
     <link rel="icon" href="/favicon.png">
 

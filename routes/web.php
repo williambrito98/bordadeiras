@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdminDepoimentosController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminNossaHistoriaController;
 use App\Http\Controllers\Admin\AdminNoticiasController;
+use App\Http\Controllers\Admin\AdminSeoController;
 use App\Http\Controllers\Admin\AdminUsersController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EstadosController;
@@ -108,6 +109,20 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::get('/contato', [AdminContatoController::class, 'index'])->name('admin.contato.index');
     Route::put('/contato', [AdminContatoController::class, 'update'])->name('admin.contato.update');
+
+    Route::resource('/seo', AdminSeoController::class)->names([
+        'create' => 'admin.seo.create',
+        'index' => 'admin.seo.index',
+        'store' => 'admin.seo.store',
+        'show' => 'admin.seo.show',
+        'edit' => 'admin.seo.edit',
+        'update' => 'admin.seo.update',
+        'destroy' => 'admin.seo.destroy'
+    ]);
+
+    Route::post('/seo/facebook/imagem/upload', [AdminSeoController::class, 'uploadFacebookImagem'])->name('admin.seo.facebook.imagem.upload');
+
+    Route::post('/seo/twitter/imagem/upload', [AdminSeoController::class, 'uploadTwitterImagem'])->name('admin.seo.twitter.imagem.upload');
 
     Route::fallback(function () {
         return redirect()->route('admin');
