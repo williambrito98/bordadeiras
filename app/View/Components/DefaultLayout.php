@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Seo;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -11,7 +12,7 @@ class DefaultLayout extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public string $title)
+    public function __construct()
     {
     }
 
@@ -20,6 +21,7 @@ class DefaultLayout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('layouts.default');
+        $seo = Seo::all()->first();
+        return view('layouts.default', ['seo' => $seo]);
     }
 }

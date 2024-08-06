@@ -1,4 +1,4 @@
-<x-default-layout :title="$title">
+<x-default-layout>
     @include('pages.home.home-carousel')
     @include('pages.home.home-secao', ['homeSecao' => $homeSecao])
     @include('pages.home.home-por-onde-passou')
