@@ -13,16 +13,16 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            EstadoSeed::class,
-            CidadeSeed::class,
-            NoticiasSeed::class,
-            DepoimentosSeed::class,
-            BordadeirasSeed::class,
-            RedesSociaisSeed::class,
-            NossaHistoriaSeed::class,
-            ContatoSeed::class,
-            HomeSecaoSeed::class,
-            SeoSeed::class,
+            #EstadoSeed::class,
+            #CidadeSeed::class,
+            #NoticiasSeed::class,
+            #DepoimentosSeed::class,
+            #BordadeirasSeed::class,
+            #RedesSociaisSeed::class,
+            #NossaHistoriaSeed::class,
+            #ContatoSeed::class,
+            #HomeSecaoSeed::class,
+            #SeoSeed::class,
         ]);
     }
 
