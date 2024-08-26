@@ -111,9 +111,10 @@ class AdminBordadeirasController extends BaseController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Bordadeiras $bordadeira)
     {
-        //
+        $bordadeira->delete();
+        return $this->flashMessage('success', 'admin.bordadeiras.index');
     }
 
     /**
