@@ -9,7 +9,7 @@
                          style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                         <a href="{{ route("bordadeira", ['bordadeira' => $bordadeira->nome ])}}">
                             <div class="post-thumb">
-                                <img src="{{ $bordadeira->thumbnail_url }}" style="padding: 0; margin: 0; " alt="">
+                                <img class="w-18 h-18 object-cover" src="{{ $bordadeira->thumbnail_url }}" style="padding: 0; margin: 0;" alt="">
                             </div>
                         </a>
                         <div class="post-content">

@@ -1825,4 +1825,14 @@ iframe {
 }
 
 
+.w-18 {
+    width: 18rem;
+}
 
+.h-18 {
+    height: 18rem;
+}
+
+.object-cover {
+    object-fit: cover;
+}
