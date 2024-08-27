@@ -24,7 +24,7 @@ class BordadeirasSeed extends Seeder
                 'email' => '',
                 'facebook' => '',
                 'youtube' => '',
-                'whatsapp' => 'https://wa.me/19993693043',
+                'whatsapp' => '19993693043?text=ol%C3%A1,%20encontrei%20seu%20bordado%20no%20site%20Bordados%20do%20Brasil:',
                 'linkedin' => '',
                 'created_at' => now(),
             ],
@@ -39,7 +39,7 @@ class BordadeirasSeed extends Seeder
                 'email' => '',
                 'facebook' => '',
                 'youtube' => '',
-                'whatsapp' => 'https://wa.me/?text=ol%C3%A1,%20encontrei%20seu%20bordado%20no%20site%20Bordados%20do%20Brasil:',
+                'whatsapp' => '?text=ol%C3%A1,%20encontrei%20seu%20bordado%20no%20site%20Bordados%20do%20Brasil:',
                 'linkedin' => '',
                 'created_at' => now(),
             ]

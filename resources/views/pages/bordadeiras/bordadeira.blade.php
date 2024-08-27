@@ -34,7 +34,7 @@
 
                             <div class="subscribe-link">
                                 @if($bordadeira->whatsapp)
-                                    <a href="{{ $bordadeira->whatsapp }}" target="_blank">
+                                    <a href="https://wa.me/{{ $bordadeira->whatsapp }}" target="_blank">
                                         <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                     </a>
                                 @endif
