@@ -117,11 +117,17 @@
                         </div>
                         <div class="col-md-6">
                             <label for="instagram"><i class="fab fa-instagram"></i> Instagram</label>
-                            <input type="text" id="instagram" name="instagram" class="form-control"
-                                   placeholder="Instagram"
-                                   aria-label="Instagram" value="{{ $bordadeira->instagram }}">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="instagram">@</span>
+                                </div>
+                                <input type="text" id="instagram" name="instagram" class="form-control"
+                                       placeholder="Instagram"
+                                       aria-label="Instagram" value="{{ $bordadeira->instagram }}">
 
-                            <x-input-error class="mt-2" :messages="$errors->get('instagram')"/>
+                                <x-input-error class="mt-2" :messages="$errors->get('instagram')"/>
+                            </div>
+
                         </div>
 
                     </div>

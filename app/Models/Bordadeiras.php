@@ -52,5 +52,7 @@ class Bordadeiras extends Model
     private static function onSave(&$model): void
     {
         $model->content = StringUtils::removeJavascriptTags($model->content);
+        $model->whatsapp = str_replace([' ', '(', ')', '-', '.'], '', $model->whatsapp);
+        $model->instagram = str_replace('@', '', $model->instagram);
     }
 }

@@ -34,13 +34,13 @@
 
                             <div class="subscribe-link">
                                 @if($bordadeira->whatsapp)
-                                    <a href="https://wa.me/{{ $bordadeira->whatsapp }}" target="_blank">
+                                    <a href="https://wa.me/{{ $bordadeira->whatsapp }}?text=ol%C3%A1,%20encontrei%20seu%20bordado%20no%20site%20Bordados%20do%20Brasil:" target="_blank">
                                         <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                     </a>
                                 @endif
 
                                 @if($bordadeira->instagram)
-                                    <a href="{{ $bordadeira->instagram }}" target="_blank">
+                                    <a href="https://www.instagram.com/{{ $bordadeira->instagram }}" target="_blank">
                                         <i class="fa fa-instagram" aria-hidden="true"></i>
                                     </a>
 
