@@ -142,7 +142,7 @@ function fileUpload(id) {
     function removeFilePreview(event) {
         event.stopPropagation();  // Prevent the click event from bubbling up
         const imgContainer = event.target.parentElement;
-        const src = event.target.previousElementSibling.src;
+        const src = event.target.parentElement.previousElementSibling.src;
         const index = +images.indexOf(src);
 
         if (!enableAutoUpload) {
