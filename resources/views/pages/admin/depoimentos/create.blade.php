@@ -2,7 +2,7 @@
     @section('content_header')
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.depoimentos.index') }}">Depoimentos</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Novo Depoimento</li>
             </ol>
         </nav>
