@@ -29,7 +29,7 @@
                                 {{ ucwords($bordadeira->nome) }}
                             </h4>
                             <p class="bordadeira_texto">
-                                {{ $bordadeira->content }}
+                                {!! $bordadeira->content !!}
                             </p>
 
                             <div class="subscribe-link">
