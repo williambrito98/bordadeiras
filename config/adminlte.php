@@ -335,6 +335,10 @@ return [
                     'url' => '/admin/nossa-historia',
                 ],
                 [
+                    'text' => 'Encontre Uma Bordadeira',
+                    'url' => '/admin/encontre-uma-bordadeira',
+                ],
+                [
                     'text' => 'Apoiadores',
                     'url' => '/admin/apoiadores'
                 ],

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bordadeiras;
+use App\Models\EncontreUmaBordadeira;
 
 class EncontreUmaBordadeiraController extends Controller
 {
@@ -10,7 +11,8 @@ class EncontreUmaBordadeiraController extends Controller
     {
 
         $title = 'Encontre uma Bordadeira';
-        $description = '<p style="font-size: 16px" align="justify">Na aba da Plataforma “Encontre uma bordadeira” a pessoa ou empresa interessada em contratar serviço de bordado em pedrarias poderá acessar as bordadeiras cadastradas através dos seus contatos e redes sociais, além de conhecer um pouco da história de cada uma.<br><br></p>';
+        $encontreUmaBordadeira = EncontreUmaBordadeira::all()->first();
+        $description = $encontreUmaBordadeira->description;
 
         $bordadeiras = Bordadeiras::all();
 

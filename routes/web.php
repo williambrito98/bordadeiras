@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminApoiadoresController;
 use App\Http\Controllers\Admin\AdminBordadeirasController;
 use App\Http\Controllers\Admin\AdminContatoController;
 use App\Http\Controllers\Admin\AdminDepoimentosController;
+use App\Http\Controllers\Admin\AdminEncontreUmaBordadeiraController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminNossaHistoriaController;
 use App\Http\Controllers\Admin\AdminNoticiasController;
@@ -123,6 +124,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('/seo/facebook/imagem/upload', [AdminSeoController::class, 'uploadFacebookImagem'])->name('admin.seo.facebook.imagem.upload');
 
     Route::post('/seo/twitter/imagem/upload', [AdminSeoController::class, 'uploadTwitterImagem'])->name('admin.seo.twitter.imagem.upload');
+
+    Route::get('/encontre-uma-bordadeira', [AdminEncontreUmaBordadeiraController::class, 'index'])->name('admin.encontre-uma-bordadeira.index');
+    Route::put('/encontre-uma-bordadeira/{encontreUmaBordadeira}', [AdminEncontreUmaBordadeiraController::class, 'update'])->name('admin.encontre-uma-bordadeira.update');
 
     Route::fallback(function () {
         return redirect()->route('admin');
