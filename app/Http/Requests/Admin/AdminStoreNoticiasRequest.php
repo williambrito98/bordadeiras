@@ -23,7 +23,7 @@ class AdminStoreNoticiasRequest extends FormRequest
     {
         return [
             'title' => 'required|string|max:255',
-            'subtitle' => 'required|string|max:255',
+            'subtitle' => 'required|string',
             'site_url' => 'required|string|max:255',
             'image_url' => 'required|file|mimes:gif,jpg,jpeg,png|max:12288',
         ];

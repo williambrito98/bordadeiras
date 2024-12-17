@@ -24,7 +24,7 @@ class AdminUpdateNoticiasRequest extends FormRequest
         return [
             'title' => 'required|string|max:255',
             'site_url' => 'required|string|max:255',
-            'subtitle' => 'required|string|max:255',
+            'subtitle' => 'required|string',
         ];
     }
 
@@ -43,8 +43,7 @@ class AdminUpdateNoticiasRequest extends FormRequest
             'site_url.string' => 'O campo site deve ser uma string.',
             'site_url.max' => 'O campo site deve ter no máximo 255 caracteres.',
             'subtitle.required' => 'O campo subtítulo é obrigatório.',
-            'subtitle.string' => 'O campo subtítulo deve ser uma string.',
-            'subtitle.max' => 'O campo subtítulo deve ter no máximo 255 caracteres.',
+            'subtitle.string' => 'O campo subtítulo deve ser uma string.'
         ];
     }
 
