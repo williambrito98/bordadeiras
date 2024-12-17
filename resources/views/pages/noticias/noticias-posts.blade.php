@@ -4,7 +4,7 @@
             <img src="{{ $noticia->image_url }}" alt="">
             <div class="conteudo">
                 <h2>{{ $noticia->title }}</h2>
-                {!! $noticia->subtitle !!}
+                <p>{{ $noticia->subtitle }}</p>
             </div>
         </a>
     </div>

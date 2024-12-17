@@ -48,7 +48,7 @@
 
                     <div class="row mt-5">
                         <div class="col-md-12">
-                            <x-textarea name="content" label="Descrição" required>
+                            <x-textarea withWidget name="content" label="Descrição" required>
                                 {{ old('content') ?? ''}}
                             </x-textarea>
                             <x-input-error class="mt-2" :messages="$errors->get('content')"/>

@@ -44,6 +44,8 @@
                     <div class="col-md-12">
                         <x-textarea name="subtitle" label="Subtítulo" required
                                     content="{{ old('subtitle') ?? $noticia->subtitle }}"/>
+
+                        <x-input-error class="mt-2" :messages="$errors->get('subtitle')"/>
                     </div>
                 </div>
 

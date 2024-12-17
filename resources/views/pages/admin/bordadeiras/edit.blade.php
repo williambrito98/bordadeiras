@@ -73,7 +73,7 @@
 
                     <div class="row mt-5">
                         <div class="col-md-12">
-                            <x-textarea name="content" label="Descrição" :content="$bordadeira->content"/>
+                            <x-textarea withWidget name="content" label="Descrição" :content="$bordadeira->content"/>
                             <x-input-error class="mt-2" :messages="$errors->get('content')"/>
                         </div>
                     </div>

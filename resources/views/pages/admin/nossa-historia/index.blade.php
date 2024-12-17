@@ -56,7 +56,7 @@
 
                     <div class="row mt-5">
                         <div class="col-md-12">
-                            <x-textarea label="Conteudo" content="{{ old('content[]') ?? $ns->content }}"
+                            <x-textarea withWidget label="Conteudo" content="{{ old('content[]') ?? $ns->content }}"
                                         id="content-{{$ns->id}}"
                                         name="content[]"/>
                         </div>

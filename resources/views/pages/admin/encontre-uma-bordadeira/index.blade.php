@@ -11,7 +11,7 @@
             <div class="p-4 my-5 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
                 <div class="row mt-5">
                     <div class="col-md-12">
-                        <x-textarea label="Descrição" content="{{ old('description') ?? $encontreUmaBordadeira->description }}"
+                        <x-textarea withWidget label="Descrição" content="{{ old('description') ?? $encontreUmaBordadeira->description }}"
                                     id="description"
                                     name="description"/>
                     </div>

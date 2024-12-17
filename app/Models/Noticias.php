@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Casts\ClearString;
 use App\Utils\StringUtils;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -19,6 +20,10 @@ class Noticias extends Model
         'content',
         'user_id',
         'site_url'
+    ];
+
+    protected $casts = [
+        'subtitle' => ClearString::class
     ];
 
     public function user()
@@ -41,7 +46,7 @@ class Noticias extends Model
 
     private static function onSave(&$model): void
     {
-        $model->subtitle = StringUtils::removeJavascriptTags($model->subtitle);
+        $model->subtitle = StringUtils::clearString($model->subtitle);
     }
 
 
