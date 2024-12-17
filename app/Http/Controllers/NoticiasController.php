@@ -10,7 +10,7 @@ class NoticiasController extends Controller
 
     public function index()
     {
-        $noticias = Noticias::all();
+        $noticias = Noticias::orderBy('id', 'desc')->get();
 
 
         return $this->view('pages.noticias.noticias', [
