@@ -4,9 +4,9 @@
             <div class="swiper-slide">
                 <div class="single-post">
                     <div class="post-content">
-                        <p align="center">{{ $depoimento->text }}</p>
+                        <p align="justify">{{ $depoimento->text }}</p>
                         <div class="post-meta d-flex">
-                            <p align="center">{{ $depoimento->autor }}</p>
+                            <p align="justify">{{ $depoimento->autor }}</p>
                         </div>
                     </div>
                 </div>
