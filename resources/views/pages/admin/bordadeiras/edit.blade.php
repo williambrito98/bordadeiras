@@ -33,7 +33,7 @@
                                         ]
                                     ];
                             @endphp
-                            <x-input-file-upload accept="images/*" :initialFiles="$initialFiles" id="thumbnail"
+                            <x-input-file-upload accept="image/*" :initialFiles="$initialFiles" id="thumbnail"
                                                  label="Thumbnail" class="w-auto"
                                                  urlAdd="{{ route('admin.bordadeiras.thumbnail.upload', [ 'bordadeira' => $bordadeira->id]) }}"
                                                  urlDelete="{{ route('admin.bordadeiras.thumbnail.delete', ['bordadeira' => $bordadeira->id]) }}"
@@ -50,7 +50,7 @@
                                         ]
                                     ];
                             @endphp
-                            <x-input-file-upload accept="images/*" :initialFiles="$initialFiles" id="banner"
+                            <x-input-file-upload accept="image/*" :initialFiles="$initialFiles" id="banner"
                                                  label="Banner" class="w-auto" enable-auto-upload="true"
                                                  urlAdd="{{ route('admin.bordadeiras.banner.upload', [ 'bordadeira' => $bordadeira->id]) }}"
                                                  urlDelete="{{ route('admin.bordadeiras.banner.delete', ['bordadeira' => $bordadeira->id]) }}"/>

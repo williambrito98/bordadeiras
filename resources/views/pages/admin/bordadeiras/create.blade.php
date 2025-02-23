@@ -25,13 +25,13 @@
                     <div class="row">
 
                         <div class="col-md-6">
-                            <x-input-file-upload accept="images/*" :initialFiles="[]" id="thumbnail"
+                            <x-input-file-upload accept="image/*" :initialFiles="[]" id="thumbnail"
                                                  label="Thumbnail" class="w-auto"/>
 
                             <x-input-error class="mt-2" :messages="$errors->get('thumbnail')"/>
                         </div>
                         <div class="col-md-6">
-                            <x-input-file-upload accept="images/*" :initialFiles="[]" id="banner"
+                            <x-input-file-upload accept="image/*" :initialFiles="[]" id="banner"
                                                  label="Banner" class="w-auto"/>
 
                             <x-input-error class="mt-2" :messages="$errors->get('banner')"/>
