@@ -3,7 +3,7 @@ version: '3'
 services:
     app_bordadeiras:
         build:
-            context: ./vendor/laravel/sail/runtimes/8.3
+            context: ./
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
