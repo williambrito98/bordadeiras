@@ -13,23 +13,8 @@ use App\Http\Controllers\Admin\AdminUsersController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EstadosController;
 use App\Http\Controllers\Admin\ProfileController;
-use App\Http\Controllers\ApoiadoresController;
-use App\Http\Controllers\BordadeiraController;
-use App\Http\Controllers\ContatoController;
-use App\Http\Controllers\EncontreUmaBordadeiraController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\NossaHistoriaController;
-use App\Http\Controllers\NoticiasController;
+use App\Http\Controllers\Admin\AdminBannerController;
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/nossa-historia', [NossaHistoriaController::class, 'index'])->name('nossa-historia');
-Route::get('/encontre-uma-bordadeira', [EncontreUmaBordadeiraController::class, 'index'])->name('encontre-uma-bordadeira');
-Route::get('/apoiadores', [ApoiadoresController::class, 'index'])->name('apoiadores');
-Route::get('/noticias', [NoticiasController::class, 'index'])->name('noticias');
-Route::get('/contato', [ContatoController::class, 'index'])->name('contato');
-Route::get('/bordadeira/{bordadeira:nome}', [BordadeiraController::class, 'index'])->name('bordadeira');
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -128,17 +113,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/encontre-uma-bordadeira', [AdminEncontreUmaBordadeiraController::class, 'index'])->name('admin.encontre-uma-bordadeira.index');
     Route::put('/encontre-uma-bordadeira/{encontreUmaBordadeira}', [AdminEncontreUmaBordadeiraController::class, 'update'])->name('admin.encontre-uma-bordadeira.update');
 
-    Route::get('/banner')->name('admin.banner.index');
+    Route::get('/banner', [AdminBannerController::class, 'index'])->name('admin.banner.index');
+    Route::post('/banner/upload', [AdminBannerController::class, 'update'])->name('admin.banner.upload');
+    Route::post('/banner/delete', [AdminBannerController::class, 'delete'])->name('admin.banner.delete');
 
     Route::fallback(function () {
         return redirect()->route('admin');
     });
-});
-
-require __DIR__ . '/auth.php';
-require __DIR__ . '/admin.php';
-
-
-Route::fallback(function () {
-    return redirect()->route('home');
 });
