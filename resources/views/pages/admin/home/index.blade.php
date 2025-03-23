@@ -7,7 +7,7 @@
         <form action="{{ route('admin.home.update') }}" method="post">
             @csrf
             @method('PUT')
-            @foreach($homeSecao as $secao)
+            @foreach ($homeSecao as $secao)
                 <input type="hidden" name="id[]" value="{{ $secao->id }}">
                 <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
                     <h4>Seção: {{ $secao->titulo }}</h4>
@@ -18,14 +18,14 @@
                                 <x-slot name="value">Titulo</x-slot>
                             </x-input-label>
                             <x-text-input placeholder="Titulo" class="form-control" label="Titulo" name="titulo[]"
-                                          value="{{ $secao->titulo }}"/>
+                                value="{{ $secao->titulo }}" />
                         </div>
                     </div>
 
                     <div class="row mt-5">
                         <div class="col-md-12">
-                            <x-textarea label="Conteudo" :content="$secao->conteudo" id="conteudo-{{$secao->id}}"
-                                        name="conteudo[]"/>
+                            <x-textarea withWidget label="Conteudo" :content="$secao->conteudo" id="conteudo-{{ $secao->id }}"
+                                name="conteudo[]" />
                         </div>
                     </div>
 
@@ -33,8 +33,7 @@
             @endforeach
 
             <div class="d-flex justify-content-end py-5">
-                <x-adminlte-button class="btn" type="submit" label="Salvar" theme="success"
-                                   icon="fas fa-lg fa-save"/>
+                <x-adminlte-button class="btn" type="submit" label="Salvar" theme="success" icon="fas fa-lg fa-save" />
             </div>
         </form>
     @stop
