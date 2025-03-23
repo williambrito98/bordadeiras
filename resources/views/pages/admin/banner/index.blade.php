@@ -9,7 +9,7 @@
                 <div class="row mt-5">
                     <div class="col-md-12">
                         @php
-                            $initialFiles = [$banner->img_url];
+                            $initialFiles = [$banner->img_url ?? ''];
                         @endphp
                         <x-input-file-upload showInput="false" :input-value="$initialFiles" accept="image/*" :initialFiles="$initialFiles"
                             id="img_url" class="w-auto" multiple="false" enableAutoUpload="true"
