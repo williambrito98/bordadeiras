@@ -318,6 +318,11 @@ return [
             'icon' => 'fas fa-user'
         ],
         [
+            'text' => 'Banner',
+            'url' => 'admin/banner',
+            'icon' => 'fas fa-image'
+        ],
+        [
             'text' => 'SEO',
             'url' => 'admin/seo',
             'icon' => 'fas fa-tachometer-alt'
