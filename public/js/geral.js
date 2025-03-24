@@ -53,9 +53,10 @@ function fileUpload(id) {
     const removeFilePreviewUploadButton = document.querySelector(
         `.remove-file-preview-upload-${id}`
     );
-    const initialFiles = JSON.parse(
+    const initialFiles = Object.values(JSON.parse(
         imageUpload.getAttribute("data-initial-files")
-    );
+    ));
+
     const urlAdd = imageUpload.getAttribute("data-url-add");
     const urlDelete = imageUpload.getAttribute("data-url-delete");
     const enableAutoUpload = imageUpload.getAttribute(
