@@ -45,7 +45,7 @@ function hideLoading() {
 
 function fileUpload(id) {
     const imageUpload = document.getElementById(id);
-    const isMultiple = imageUpload.multiple === "true";
+    const isMultiple = imageUpload.multiple
     const imagePreview = document.getElementById(`imagePreview-${id}`);
     const imagePreviewDefaultText = document.getElementById(
         `imagePreviewDefaultText-${id}`
