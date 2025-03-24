@@ -63,7 +63,7 @@ function fileUpload(id) {
         "data-enable-auto-upload"
     );
     const showInput = imageUpload.getAttribute("data-show-input");
-    let inputValue = JSON.parse(imageUpload.getAttribute("data-input-value"));
+    let inputValue = Object.values(JSON.parse(imageUpload.getAttribute("data-input-value")))
 
     let images = initialFiles
         .filter((file) => file)
