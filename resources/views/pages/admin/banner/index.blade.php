@@ -12,7 +12,7 @@
                             $initialFiles = [$banner->img_url ?? ''];
                         @endphp
                         <x-input-file-upload showInput="false" :input-value="$initialFiles" accept="image/*" :initialFiles="$initialFiles"
-                            id="img_url" class="w-auto" multiple="false" enableAutoUpload="true"
+                            id="img_url" class="w-auto" enableAutoUpload="true"
                             urlAdd="{{ route('admin.banner.upload') }}" url-delete="{{ route('admin.banner.delete') }}" />
                     </div>
                 </div>
