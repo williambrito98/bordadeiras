@@ -54,7 +54,7 @@ class HomeController extends Controller
 
         $depoimentos = Depoimentos::all();
         $bordadeiras = Bordadeiras::all();
-        $noticias = Noticias::all();
+        $noticias = Noticias::orderBy('created_at', 'desc')->get();
         $homeSecao = HomeSecao::all();
 
         return $this->view('pages.home.home', compact(['title', 'noticias', 'slider', 'depoimentos', 'bordadeiras', 'homeSecao']));
