@@ -27,7 +27,7 @@ class AdminStorePorOndeProjetoPassouRequest extends FormRequest
             'description' => '',
             'tipo' => 'required|string|in:imagem,youtube',
             'iframe_url' => $this->request->get('tipo') === 'youtube' ? 'required' : '',
-            'src' => $this->request->get('tipo') === 'imagem' ? 'required|image|mimes:jpeg,png,jpg,gif|max:2048' : '',
+            'src' => $this->request->get('tipo') === 'imagem' ? 'required|image|mimes:jpeg,png,jpg,gif' : '',
         ];
     }
 
@@ -38,6 +38,9 @@ class AdminStorePorOndeProjetoPassouRequest extends FormRequest
             'tipo.string' => 'O campo tipo deve ser uma string.',
             'tipo.in' => 'O campo tipo deve ser um dos seguintes valores: imagem, youtube.',
             'iframe_url.required_if' => 'O campo Link Iframe é obrigatório quando o tipo é youtube.',
+            'src.required_if' => 'O campo Imagem é obrigatório quando o tipo é imagem.',
+            'src.image' => 'O campo Imagem deve ser uma imagem.',
+            'src.mimes' => 'O campo Imagem deve ser um dos seguintes formatos: jpeg, png, jpg, gif.',
         ];
     }
 
@@ -46,6 +49,7 @@ class AdminStorePorOndeProjetoPassouRequest extends FormRequest
         return [
             'tipo' => 'Tipo',
             'iframe_url' => 'URL do iframe',
+            'src' => 'Imagem',
         ];
     }
 
