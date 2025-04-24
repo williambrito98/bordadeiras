@@ -313,6 +313,11 @@ return [
             'icon' => 'fas fa-comments'
         ],
         [
+            'text' => 'Por Onde o Projeto Passou',
+            'url' => 'admin/por-onde-projeto-passou',
+            'icon' => 'fas fa-map-marked-alt'
+        ],
+        [
             'text' => 'Usuários',
             'url' => 'admin/users',
             'icon' => 'fas fa-user'

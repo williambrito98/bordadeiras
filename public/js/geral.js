@@ -26,7 +26,9 @@ function showNotification(message, type = "success") {
         close: true,
         gravity: "top",
         position: "right",
-        backgroundColor: type === "success" ? "#4CAF50" : "#F44336",
+        style: {
+            backgroundColor: type === "success" ? "#4CAF50" : "#F44336",
+        },
         stopOnFocus: true,
     }).showToast();
 }

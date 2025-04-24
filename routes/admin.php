@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\EstadosController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\AdminBannerController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminPorOndeProjetoPassou;
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -116,6 +117,21 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/banner', [AdminBannerController::class, 'index'])->name('admin.banner.index');
     Route::post('/banner/upload', [AdminBannerController::class, 'update'])->name('admin.banner.upload');
     Route::post('/banner/delete', [AdminBannerController::class, 'delete'])->name('admin.banner.delete');
+
+    Route::resource('/por-onde-projeto-passou', AdminPorOndeProjetoPassou::class)->names([
+        'create' => 'admin.por-onde-projeto-passou.create',
+        'index' => 'admin.por-onde-projeto-passou.index',
+        'store' => 'admin.por-onde-projeto-passou.store',
+        'show' => 'admin.por-onde-projeto-passou.show',
+        'edit' => 'admin.por-onde-projeto-passou.edit',
+        'update' => 'admin.por-onde-projeto-passou.update',
+        'destroy' => 'admin.por-onde-projeto-passou.destroy'
+    ]);
+
+    Route::post('/por-onde-projeto-passou/image/upload', [AdminPorOndeProjetoPassou::class, 'uploadImage'])->name('admin.por-onde-projeto-passou.imagem.upload');
+    Route::get('/por-onde-projeto-passou/{porOndeProjetoPassou}/updateOrder/{newOrder}' , [AdminPorOndeProjetoPassou::class, 'updateOrder'])->name('admin.por-onde-projeto-passou.order.update');
+    Route::get('/por-onde-projeto-passou/{porOndeProjetoPassou}/updateVisivel/{visivel}' , [AdminPorOndeProjetoPassou::class, 'updateVisivel'])->name('admin.por-onde-projeto-passou.visivel.update');
+
 
     Route::fallback(function () {
         return redirect()->route('admin');
