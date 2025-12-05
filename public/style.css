@@ -23,48 +23,41 @@
 :: 14.0 Single Blog CSS
 ----------------------------------- */
 
-/* ***** Fonts ***** */
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700|Quicksand:300,400,500,700|Shadows+Into+Light+Two');
-
 /* ***** Import CSS ***** */
 
-@import 'css/bootstrap/bootstrap.min.css';
-@import 'css/others/animate.css';
-@import 'css/others/magnific-popup.css';
-@import 'css/others/meanmenu.min.css';
-@import 'css/others/owl.carousel.min.css';
-@import 'css/others/font-awesome.min.css';
-@import 'css/others/pe-icon-7-stroke.css';
+@import "css/bootstrap/bootstrap.min.css";
+@import "css/others/animate.css";
+@import "css/others/magnific-popup.css";
+@import "css/others/meanmenu.min.css";
+@import "css/others/owl.carousel.min.css";
+@import "css/others/font-awesome.min.css";
+@import "css/others/pe-icon-7-stroke.css";
 
 /* --------------------
 :: 1.0 Base CSS
 -------------------- */
 
 @font-face {
-    font-family: 'Halftone';
-    src: url('fonts/Halftone.eot');
-    src: url('fonts/Halftone.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Halftone.woff') format('woff'),
-    url('fonts/Halftone.ttf') format('truetype'),
-    url('fonts/Halftone.svg#StMarieThin') format('svg');
+    font-family: "Halftone";
+    src: url("fonts/Halftone.eot");
+    src: url("fonts/Halftone.eot?#iefix") format("embedded-opentype"),
+        url("fonts/Halftone.woff") format("woff"),
+        url("fonts/Halftone.ttf") format("truetype"),
+        url("fonts/Halftone.svg#StMarieThin") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
-Halftone
-
-@font-face {
-    font-family: 'Overlock';
-    src: url('fonts/Overlock.eot');
-    src: url('fonts/Overlock.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Overlock.woff') format('woff'),
-    url('fonts/Overlock.ttf') format('truetype'),
-    url('fonts/Overlock.svg#StMarieThin') format('svg');
+Halftone @font-face {
+    font-family: "Overlock";
+    src: url("fonts/Overlock.eot");
+    src: url("fonts/Overlock.eot?#iefix") format("embedded-opentype"),
+        url("fonts/Overlock.woff") format("woff"),
+        url("fonts/Overlock.ttf") format("truetype"),
+        url("fonts/Overlock.svg#StMarieThin") format("svg");
     font-weight: normal;
     font-style: normal;
 }
-
 
 * {
     margin: 0;
@@ -72,7 +65,7 @@ Halftone
 }
 
 body {
-    font-family: 'Overlock', sans-serif;
+    font-family: "Overlock", sans-serif;
     position: relative;
     z-index: auto;
 }
@@ -83,7 +76,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Overlock', sans-serif;
+    font-family: "Overlock", sans-serif;
     font-weight: 700;
     color: #232d37;
     line-height: 1.25;
@@ -278,7 +271,7 @@ li {
 }
 
 .font-shadow-into-light {
-    font-family: 'Halftone', cursive !important;
+    font-family: "Halftone", cursive !important;
 }
 
 .yummy-table {
@@ -364,7 +357,6 @@ li {
     -ms-flex-align: center;
     align-items: center;
 }
-
 
 .top_header_area .top_social_bar > a {
     font-size: 12px;
@@ -465,7 +457,7 @@ li {
 -------------------- */
 
 .logo_area .yummy-logo {
-    font-family: 'Halftone', cursive;
+    font-family: "Halftone", cursive;
     font-size: 60px;
     margin-bottom: 0;
     padding: 35px 0 20px 0;
@@ -510,7 +502,7 @@ li {
 .welcome-single-slide {
     position: relative;
     z-index: 1;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .welcome-single-slide .project_title a > h5 {
@@ -551,7 +543,6 @@ li {
     color: rgba(255, 255, 255, 0.9);
 }
 
-
 .welcome-single-slide .post-date-commnents a:first-child {
     margin-right: 30px;
 }
@@ -559,14 +550,13 @@ li {
 .welcome-single-slide .post-date-commnents a:first-child:after {
     width: 2px;
     height: 80%;
-    content: '';
+    content: "";
     position: absolute;
     top: 10%;
     right: -14px;
     z-index: 2;
     background-color: #fff;
 }
-
 
 .welcome-post-sliders {
     position: relative;
@@ -692,7 +682,7 @@ li {
 .post-author a:after {
     width: 2px;
     height: 60%;
-    content: '';
+    content: "";
     position: absolute;
     top: 20%;
     right: -14px;
@@ -733,7 +723,6 @@ li {
     text-align: center;
 }
 
-
 .single-post .read-more:hover {
     color: #000;
     border: 1px solid #000;
@@ -752,7 +741,6 @@ li {
     margin-right: 0;
     margin-left: 15px;
     margin-bottom: 30px;
-
 }
 
 .list-blog.single-post {
@@ -835,7 +823,6 @@ li {
     cursor: url(img/core-img/next.png), auto !important;
 }
 
-
 /* --------------------
 :: 8.0 Footer Social Area CSS
 -------------------- */
@@ -845,7 +832,7 @@ li {
     padding: 50px 0;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .single-icon > a {
@@ -870,7 +857,7 @@ li {
 }
 
 .footer-logo-area .yummy-logo {
-    font-family: 'Halftone', cursive;
+    font-family: "Halftone", cursive;
     font-size: 60px;
     margin-bottom: 0;
     padding: 0 0 20px 0;
@@ -889,7 +876,7 @@ li {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
 }
 
 .copy_right_text > p {
@@ -910,7 +897,6 @@ li {
     height: 620px;
     width: 100%;
 }
-
 
 /* --------------------
 :: 10.0 Sidebar Area CSS
@@ -971,10 +957,7 @@ li {
 }
 */
 
-
 .widget-title > h6 {
-
-
     background-image: url(img/bg-img/bkg_titulo_preto.jpg);
     height: 40px;
     width: 100%;
@@ -982,10 +965,8 @@ li {
     border-radius: 2px;
     margin-bottom: 30px;
     color: white;
-    font-family: 'Halftone', cursive !important;
+    font-family: "Halftone", cursive !important;
     font-size: 25px;
-
-
 }
 
 .widget-title2 > h6 {
@@ -996,10 +977,8 @@ li {
     border-radius: 2px;
     margin-bottom: 30px;
     color: white;
-    font-family: 'Halftone', cursive !important;
+    font-family: "Halftone", cursive !important;
     font-size: 25px;
-
-
 }
 
 .widget-title3 > h6 {
@@ -1010,12 +989,9 @@ li {
     border-radius: 2px;
     margin-bottom: 30px;
     color: yellow;
-    font-family: 'Halftone', cursive !important;
+    font-family: "Halftone", cursive !important;
     font-size: 25px;
-
-
 }
-
 
 .bkg_hr1 {
     background-image: url(img/hr.png);
@@ -1025,16 +1001,11 @@ li {
     border-radius: 2px;
     margin-bottom: 30px;
     color: white;
-    font-family: 'Halftone', cursive !important;
+    font-family: "Halftone", cursive !important;
     font-size: 25px;
-
-
 }
 
-
 .bkg_hr2 {
-
-
     background-image: url(img/bg-img/hr_preto.png);
     height: 25px;
     width: 100%;
@@ -1042,12 +1013,9 @@ li {
     border-radius: 2px;
     margin-bottom: 30px;
     color: white;
-    font-family: 'Halftone', cursive !important;
+    font-family: "Halftone", cursive !important;
     font-size: 25px;
-
-
 }
-
 
 .about-me-widget-thumb img {
     height: 200px;
@@ -1135,10 +1103,10 @@ li {
     height: 100%;
     left: 0;
     top: 0;
-    content: '';
+    content: "";
     background-color: rgba(30, 29, 29, 0.8);
     z-index: 1;
-    border-radius: 30px
+    border-radius: 30px;
 }
 
 .add-widget .add-text {
@@ -1230,7 +1198,7 @@ li {
     width: 100%;
     height: 100%;
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     left: 0;
     background-color: rgba(35, 45, 55, 0.7);
@@ -1247,7 +1215,7 @@ li {
     margin-bottom: 0;
     list-style: none;
     background-color: transparent;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     margin-top: 30px;
 }
 
@@ -1258,7 +1226,7 @@ li {
 
 .breadcrumb-item + .breadcrumb-item:before {
     content: "\f105";
-    font-family: 'FontAwesome'
+    font-family: "FontAwesome";
 }
 
 /* --------------------
@@ -1359,7 +1327,6 @@ li {
     background-color: #4c65a8;
 }
 
-
 .single-post-share-info a.facebook:hover {
     background-color: #3555ac;
 }
@@ -1424,10 +1391,10 @@ li {
 
 .single_blog_area ul li:before {
     position: absolute;
-    content: '\f111';
+    content: "\f111";
     left: 0;
     top: 5px;
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
     font-size: 8px;
     color: #419639;
 }
@@ -1463,7 +1430,6 @@ li {
 .related-post-slider .post-content h6 {
     line-height: 1.5;
     margin-bottom: 0;
-
 }
 
 .related-post-slider .post-thumb img {
@@ -1504,18 +1470,16 @@ li {
     left: 100px;
     top: 0;
     z-index: 2;
-    content: ''
+    content: "";
 }
 
 .single_comment_area ol li.single_comment_area {
     margin-left: 130px;
 }
 
-
 .single_comment_area ol li.single_comment_area:after {
     display: none;
 }
-
 
 .comment-wrapper {
     margin-bottom: 30px;
@@ -1528,7 +1492,11 @@ li {
     margin-right: 60px;
 }
 
-.single_comment_area ol li.single_comment_area .comment-wrapper .comment-author {
+.single_comment_area
+    ol
+    li.single_comment_area
+    .comment-wrapper
+    .comment-author {
     margin-right: 30px;
 }
 
@@ -1579,8 +1547,6 @@ li {
     position: relative;
     background-size: cover;
     z-index: 1;
-
-
 }
 
 .bkg-pagina2 {
@@ -1589,18 +1555,17 @@ li {
     height: 100%;
     left: 0;
     top: 0;
-    content: '';
+    content: "";
     background-color: rgba(255, 255, 255, 0.95);
     z-index: -1;
 }
 
 .font_halftone {
-    font-family: 'Halftone', cursive !important;
+    font-family: "Halftone", cursive !important;
 }
 
 .font_overlock {
-    font-family: 'Overlock', sans-serif !important;
-
+    font-family: "Overlock", sans-serif !important;
 }
 
 .swiper {
@@ -1713,7 +1678,6 @@ iframe {
     }
 }
 
-
 @media (max-width: 768px) {
     .link-destacado {
         font-size: 0.9rem !important;
@@ -1734,9 +1698,7 @@ iframe {
     .swiper-button-next {
         right: 10% !important;
     }
-
 }
-
 
 .slider-legends {
     position: absolute;
@@ -1751,17 +1713,20 @@ iframe {
     box-sizing: border-box;
 }
 
-.swiper-button-next, .swiper-rtl .swiper-button-prev {
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
     right: 15%;
     left: auto;
 }
 
-.swiper-button-prev, .swiper-rtl .swiper-button-next {
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
     left: 15%;
     right: auto;
 }
 
-.swiper-button-next:after, .swiper-button-prev:after {
+.swiper-button-next:after,
+.swiper-button-prev:after {
     font-family: swiper-icons;
     font-size: 4rem;
     text-transform: none !important;
@@ -1770,12 +1735,10 @@ iframe {
     line-height: 1;
 }
 
-
 .owl-carousel .owl-item img {
     height: calc((100vh / 3) + 150px) !important;
     object-fit: cover !important;
 }
-
 
 /* Estiliza a barra de rolagem */
 ::-webkit-scrollbar {
@@ -1824,7 +1787,6 @@ iframe {
 .gallery-item:hover img {
     transform: scale(1.1);
 }
-
 
 .w-18 {
     width: 18rem;

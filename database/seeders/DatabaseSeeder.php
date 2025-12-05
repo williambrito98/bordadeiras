@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             ContatoSeed::class,
             HomeSecaoSeed::class,
             SeoSeed::class,
+            EncontreUmaBordadeiraSeeder::class,
         ]);
     }
 

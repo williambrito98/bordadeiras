@@ -33,26 +33,26 @@
                             </p>
 
                             <div class="subscribe-link">
-                                @if($bordadeira->whatsapp)
-                                    <a href="https://wa.me/{{ $bordadeira->whatsapp }}?text=ol%C3%A1,%20encontrei%20seu%20bordado%20no%20site%20Bordados%20do%20Brasil:" target="_blank">
+                                @if ($bordadeira->whatsapp)
+                                    <a href="https://wa.me/{{ $bordadeira->whatsapp }}?text=Ol%C3%A1%2C%20encontrei%20seu%20bordado%20na%20Plataforma%20Bordadeiras%20do%20Brasil.%20Voc%C3%AA%20est%C3%A1%20aceitando%20encomendas%3F"
+                                        target="_blank">
                                         <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                     </a>
                                 @endif
 
-                                @if($bordadeira->instagram)
+                                @if ($bordadeira->instagram)
                                     <a href="https://www.instagram.com/{{ $bordadeira->instagram }}" target="_blank">
                                         <i class="fa fa-instagram" aria-hidden="true"></i>
                                     </a>
-
                                 @endif
 
-                                @if($bordadeira->facebook)
+                                @if ($bordadeira->facebook)
                                     <a href="{{ $bordadeira->facebook }}" target="_blank">
                                         <i class="fa fa-facebook" aria-hidden="true"></i>
                                     </a>
                                 @endif
 
-                                @if($bordadeira->youtube)
+                                @if ($bordadeira->youtube)
                                     <a href="{{ $bordadeira->youtube }}" target="_blank">
                                         <i class="fa fa-youtube" aria-hidden="true"></i>
                                     </a>
